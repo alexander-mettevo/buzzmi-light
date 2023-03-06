@@ -1,0 +1,5 @@
+.other-services {
+  &__title {
+    @include adaptiveValue('margin-bottom', 40, 15)
+  }
+}

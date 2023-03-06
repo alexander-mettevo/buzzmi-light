@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+
+  svg {
+    @include adaptiveValue('width', 90, 55);
+    @include adaptiveValue('height', 100, 62);
+  }
+
+  &__text {
+
+    [class~="h2"] {
+      background-image: var(--logo-text);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+}

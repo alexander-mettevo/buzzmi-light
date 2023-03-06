@@ -1,0 +1,56 @@
+// variables for background colors
+:root {
+  --primary: linear-gradient(86.83deg, #FF9800 -45.01%, #EB4A66 25.91%, #C600CA 101.38%);
+  --logo-color: radial-gradient(75.57% 107.73% at 52.5% 10.85%, #EF8ED5 0%, #EC44D0 52.08%, #C1169C 100%);
+  --accent: #EF8CD5;
+  --text-color: #000000;
+  --text-secondary: #C0BACB;
+  --bg-secondary: #E4DBF1;
+  --input-border: #7E00E0;
+  --border: linear-gradient(#FF9800, #EB4A66, #C600CA);
+  --error-color: #F02461;
+  --success-color: #25AF4C;
+  --secondary-color: #ff00ff;
+  --logo-text: linear-gradient(#555A66, #000000);
+
+  --main-bg: #fff;
+  --main-opposite-bg: #101010;
+  --main-secondary-bg: #E4DBF1;
+  --layout-bg: linear-gradient(90.58deg, #EF8ED5 1.06%, #EC44D0 52.41%, #C1169C 99.65%);
+
+  // variables for text colors
+  --main-text: #000000;
+  --main-opposite-text: #ffffff;
+  --main-secondary-text: #584F68;
+  --primary-text: radial-gradient(75.57% 107.73% at 52.5% 10.85%, #EF8ED5 0%, #EC44D0 52.08%, #C1169C 100%);
+  --alter-text: #000072;
+
+  // variables for forms
+  --form-bg: #F4F1F8;
+  --form-box-shadow:  0px 4px 24px rgba(0, 0, 0, 0.25);
+  --form-items-bg: linear-gradient(113.36deg, #FF41B3 19.17%, #7E00E0 84.92%);
+  --input-focus-shadow:-4px 0px 8px rgba(247, 32, 131, 0.4), 4px 0px 8px rgba(139, 12, 219, 0.4);
+  --input-error-shadow:-4px 0px 8px #F02461, 4px 0px 8px #F02461;
+  --input-success-shadow:-4px 0px 8px #25AF4C, 4px 0px 8px #25AF4C;
+
+  // variables for btns
+  --btn-primary-bg: linear-gradient(86.83deg, #FF9800 -45.01%, #EB4A66 25.91%, #C600CA 101.38%);
+  --btn-primary-box-shadow: -20px 4px 24px rgba(247, 32, 131, 0.26), 20px 8px 32px rgba(139, 12, 219, 0.25), inset 0px -2px 2px rgba(255, 255, 255, 0.32);
+  --btn-primary-box-shadow-hover: -20px 0px 24px rgba(247, 32, 131, 0.46), 20px 0px 32px rgba(139, 12, 219, 0.36), inset 0px -2px 2px rgba(255, 255, 255, 0.52);
+  --btn-primary-box-shadow-pressed: -2px 2px 4px rgba(247, 32, 131, 0.26), 2px 2px 4px rgba(139, 12, 219, 0.25);
+  --btn-primary-bg-pressed:linear-gradient(84.99deg, #ED8A04 -44.56%, #E04C78 27.85%, #B901B9 104.91%);
+  --btn-arrow-bg:linear-gradient(#FF41B3, #7E00E0);
+
+  // variables for scroll
+  --scroll-bg: linear-gradient(137.29deg, #FF7F62 21.2%, #FF42B4 88.24%);
+  --scroll-thumb-bg: #E4DBF1;
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+  display: inline-flex;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  @include adaptiveValue('min-height', 60, 50);
+  @include adaptiveValue('padding-top', 13, 8);
+  @include adaptiveValue('padding-bottom', 13, 8);
+  @include adaptiveValue('padding-left', 50, 40);
+  @include adaptiveValue('padding-right', 50, 40);
+
+
+
+  @media (any-hover: hover) {
+    &:hover {
+    }
+  }
+
+  &._fw {
+    width: 100%;
+  }
+
+  &_primary {
+    background: var(--btn-primary-bg);
+    color: var(--main-opposite-text);
+    box-shadow: var(--btn-primary-box-shadow);
+
+    &:hover {
+      box-shadow: var(--btn-primary-box-shadow-hover);
+
+      span {
+        text-shadow: 0 0 4px var(--main-opposite-text);
+      }
+    }
+
+    &:active {
+      box-shadow: var(--btn-primary-box-shadow-pressed);
+      background: var(--btn-primary-bg-pressed);
+    }
+  }
+
+  &_inactive {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &_secondary {
+    position: relative;
+    background: inherit;
+    transition: all 0.3s ease-in-out;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 30px;
+      padding: 3px 4px;
+      background: var(--primary);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    border-radius: 30px;
+
+    span {
+      display: inline-block;
+      background-image: var(--primary);
+      background-clip: text;
+      color: transparent;
+      //transition: all 0.3s ease-in-out;
+    }
+
+
+    &:hover, &:active {
+      background-image: var(--btn-primary-bg);
+      box-shadow: var(--btn-primary-box-shadow-hover);
+
+      span {
+        color: var(--main-opposite-text);
+      }
+    }
+  }
+
+
+  &_regular {
+    border: 1px solid var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: var(--bg-secondary);
+    }
+  }
+}
+
+//тут только миксины и вот такие вот стили использовтаь
+// типо выбрать цвета сконструировать шаблоны на основе миксинов для каждого компонента и все
+

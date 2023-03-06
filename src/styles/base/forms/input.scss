@@ -1,0 +1,125 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input-wrapper {
+ @include adaptiveValue('margin-bottom', 18, 24);
+}
+
+.input-code-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.input-label {
+  text-align: center;
+  font-weight: 600;
+
+  @include adaptiveValue('font-size', 18, 16);
+  @include adaptiveValue('line-height', 22, 20);
+
+
+  & > div {
+    @include adaptiveValue('margin-bottom', 14, 10);
+  }
+
+  @media (max-width: $mobile) {
+    font-weight: 500;
+  }
+}
+
+.input-alter-action {
+  text-align: center;
+  @include adaptiveValue('font-size', 18, 16);
+  @include adaptiveValue('line-height', 22, 20);
+  @include adaptiveValue('margin-top', 30, 24);
+  font-weight: 600;
+  background-image: var(--primary);
+  background-clip: text;
+  color: transparent;
+
+  @media (max-width: $mobile) {
+    font-weight: 500;
+  }
+}
+
+.input {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  border: 1px solid var(--input-border);
+  transition: all 0.3s ease-in-out;
+
+  &_simple-text {
+    padding: 14px 24px;
+  }
+
+  &_code {
+    padding: 9px 10px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 15px;
+
+    @include adaptiveValue('font-size', 22, 18);
+    @include adaptiveValue('width', 40, 32);
+    @include adaptiveValue('height', 50, 40);
+  }
+
+  &._form-focus {
+  }
+
+  &._form-error {
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+    margin-bottom: 5px;
+
+    &:focus {
+      box-shadow: var(--input-error-shadow) !important;
+    }
+  }
+
+  &._form-success {
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+
+    &:focus {
+      box-shadow: var(--input-success-shadow) !important;
+    }
+  }
+
+  &._inactive {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--input-focus-shadow);
+  }
+}
+
+.input[placeholder]:not([data-placeholder-nohiden]) {
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}

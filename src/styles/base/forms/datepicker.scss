@@ -1,0 +1,42 @@
+.date-wrapper {
+  position: relative;
+
+  & > svg {
+    position: absolute;
+    left: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    color: var(--text-secondary);
+  }
+}
+
+.date-picker {
+  width: 100%;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  border: 1px solid var(--input-border);
+  transition: all 0.3s ease-in-out;
+  background: var(--main-bg);
+
+  .react-date-picker__wrapper {
+    border: none;
+    padding: 12px 24px 12px 54px;
+
+    .react-date-picker__inputGroup__year {
+      width: auto !important;
+    }
+  }
+}
+
+.line-wrapper {
+  .react-date-picker__inputGroup__divider {
+    opacity: 0.5;
+  }
+}
+

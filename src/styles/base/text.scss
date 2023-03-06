@@ -1,0 +1,109 @@
+// Heading text
+
+.h1 {
+  //@include adaptiveValue('font-size', 48, 36);
+  //@include adaptiveValue('line-height', 59, 44);
+}
+
+.h2 {
+  font-weight: 800;
+
+  @include adaptiveValue('font-size', 48, 36);
+  @include adaptiveValue('line-height', 59, 44);
+}
+
+.h3 {
+  font-weight: 800;
+
+  @include adaptiveValue('font-size', 36, 28);
+  @include adaptiveValue('line-height', 44, 32);
+}
+
+.h4 {
+  font-weight: 700;
+
+  @include adaptiveValue('font-size', 28, 22);
+  @include adaptiveValue('line-height', 34, 28);
+}
+
+.h5 {
+  font-weight: 700;
+
+  @include adaptiveValue('font-size', 22, 16);
+  @include adaptiveValue('line-height', 28, 20);
+}
+
+.h6 {
+  font-weight: 600;
+
+  @include adaptiveValue('font-size', 20, 16);
+  @include adaptiveValue('line-height', 22, 20);
+}
+
+// Simple text
+
+.text-b {
+  font-weight: 500;
+
+  @include adaptiveValue('font-size', 17, 15);
+  @include adaptiveValue('line-height', 21, 20);
+}
+
+.text-r {
+  font-weight: 400;
+  text-transform: none;
+
+  @include adaptiveValue('font-size', 15, 12);
+  @include adaptiveValue('line-height', 18, 15);
+}
+
+.text-s {
+  font-weight: 300;
+
+  @include adaptiveValue('font-size', 12, 10);
+  @include adaptiveValue('line-height', 15, 14);
+}
+
+// Assets text
+
+.btn-text {
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include adaptiveValue('font-size', 22, 16);
+  @include adaptiveValue('line-height', 20, 20);
+}
+
+// Color text
+
+.text-primary {
+  background-image: var(--primary);
+  background-clip: text;
+  color: transparent;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-error {
+  color: var(--error-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+// Position text
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}

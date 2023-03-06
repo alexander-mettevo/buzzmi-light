@@ -1,0 +1,25 @@
+.arrow {
+  cursor: pointer;
+  position: relative;
+  width: 12px;
+  transform: rotate(90deg);
+
+  &-top,
+  &-bottom {
+    background: var(--btn-arrow-bg);
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    border-radius: 60px;
+  }
+
+  &-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+
+  &-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+}
