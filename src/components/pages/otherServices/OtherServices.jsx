@@ -6,7 +6,7 @@ import Modal from "../../modal/Modal.jsx";
 
 const OtherServices = () => {
   return (
-    <DoubleLayout reverse>
+    <DoubleLayout reverse imageUrl={'./images/registration/intro.png'}>
       <div className='other-services'>
         <div className='h4 text-center other-services__title'>
           Choose your Social Network
@@ -14,7 +14,6 @@ const OtherServices = () => {
         <OtherServicesButtons/>
         <BackBtn/>
       </div>
-
     </DoubleLayout>
   );
 };

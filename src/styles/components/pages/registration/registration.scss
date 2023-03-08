@@ -1,0 +1,18 @@
+.registration {
+
+  &__title {
+    @include adaptiveValue('margin-top', 38, 18);
+    @include adaptiveValue('margin-bottom', 67, 18);
+  }
+
+  &__btn {
+    margin-bottom: 23px;
+    display: block;
+  }
+
+  &__footer {
+    margin-top: 30px;
+  }
+}
+
+@import "policy";

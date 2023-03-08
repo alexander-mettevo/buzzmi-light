@@ -23,7 +23,7 @@ const LoginForms = () => {
     <Form error={error} onSubmit={handleSubmit(onSubmit)} className={'login__form'}>
       <Input errors={errors.identifier} label='Your Phone or Email' name='identifier' register={register}/>
       <Input errors={errors.password} type='password' label='Your Password' name='password' register={register}/>
-      <PrimaryButton type='submit'>LOG IN</PrimaryButton>
+      <PrimaryButton className='login__btn' type='submit'>LOG IN</PrimaryButton>
     </Form>
   );
 };

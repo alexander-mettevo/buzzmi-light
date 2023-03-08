@@ -2,10 +2,7 @@ import React from 'react';
 import FormReport from "./FormReport.jsx";
 
 const Report = () => {
-
-  return (
-      <FormReport/>
-  );
+  return (<FormReport/>);
 };
 
 export default Report;

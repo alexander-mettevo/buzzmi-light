@@ -10,10 +10,21 @@
 
   &__text {
 
-    [class~="h2"] {
+    .h4 {
+      @include adaptiveValue('font-size', 28, 12);
+      @include adaptiveValue('line-height', 28, 12);
+    }
+
+    .h2 {
       background-image: var(--logo-text);
       background-clip: text;
+      font-family: 'Outer-Sans', sans-serif;
+      font-weight: 500;
       color: transparent;
+
+      @include adaptiveValue('letter-spacing', 6, 3);
+      @include adaptiveValue('font-size', 45, 33);
+      @include adaptiveValue('line-height', 45, 33);
     }
   }
 }

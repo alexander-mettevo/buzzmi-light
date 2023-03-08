@@ -1,0 +1,17 @@
+.policy {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 300px;
+  margin: 0 auto;
+
+  &__link {
+    color: var(--text-secondary);
+    text-decoration: underline;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

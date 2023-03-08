@@ -7,6 +7,10 @@
 
   &__reverse {
     flex-direction: row-reverse;
+
+    .double-layout__image {
+      text-align: right;
+    }
   }
 
 
@@ -17,6 +21,15 @@
 
   &__content {
     flex: 0 0 45%;
+  }
+
+  &__mobile-support {
+    display: none;
+    text-align: right;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
   }
 
   &__image {

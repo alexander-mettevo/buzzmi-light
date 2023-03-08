@@ -14,16 +14,12 @@
     font-family: 'Lato', sans-serif;
 
     @include adaptiveValue('margin-bottom', 20, 16);
-    @include adaptiveValue('margin-top', 20, 16);
     @include adaptiveValue('font-size', 18, 14);
     @include adaptiveValue('line-height', 22, 18);
   }
-}
 
-.login-service {
-  @include adaptiveValue('margin-bottom', 20, 16);
-
-  & > * {
+  &__btn {
     @include adaptiveValue('margin-bottom', 20, 16);
   }
 }
+

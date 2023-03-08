@@ -1,0 +1,11 @@
+.services {
+  @include adaptiveValue('margin-bottom', 20, 16);
+
+  & > * {
+    @include adaptiveValue('margin-bottom', 20, 16);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

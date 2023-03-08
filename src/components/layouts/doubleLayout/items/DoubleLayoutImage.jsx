@@ -2,15 +2,13 @@ import React from 'react';
 import SupportBtn from "../../../reusable/btns/supportBtn/SupportBtn.jsx";
 import Tooltip from "../../../reusable/assets/tooltip/Tooltip.jsx";
 
-const DoubleLayoutImage = ({hideSupportBtn}) => {
+const DoubleLayoutImage = ({reverse, imageUrl}) => {
   return (
-    <div className='double-layout__image text-right'>
-      {!hideSupportBtn &&
-        <Tooltip position={'left'} tooltipText={'Any problems? Report Please  '}>
+    <div className='double-layout__image '>
+        <Tooltip position={!!reverse ? 'left' : 'right'} tooltipText={'Any problems? Report Please  '}>
           <SupportBtn/>
         </Tooltip>
-      }
-      <img src="/images/login/intro.png" alt="intro"/>
+      <img src={imageUrl} alt="intro"/>
     </div>
   );
 };

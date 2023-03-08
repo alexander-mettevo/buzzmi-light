@@ -8,7 +8,7 @@ import QuadServicesButtons from "./items/serviceButtons/QuadServicesButtons.jsx"
 
 const Login = () => {
   return (
-    <DoubleLayout hideSupportBtn>
+    <DoubleLayout imageUrl={'./images/login/intro.png'}>
       <div>
         <Logo subtitle='Welcome to'/>
       </div>
@@ -22,14 +22,6 @@ const Login = () => {
             &nbsp;
             <Link className={'text-primary'} to='/registration'>Sign up</Link>
           </div>
-          {/*<DateInput label={'Input Label'}/>*/}
-          {/*<CodeInputs label={'Input Label'}/>*/}
-
-          {/*<input className="input input__alt"/>*/}
-          {/*<RegularButton className={'_fw'}>Test</RegularButton>*/}
-          {/*<RegularButton>Test</RegularButton>*/}
-          {/*<SecondaryButton>Test</SecondaryButton>*/}
-
         </div>
       </div>
     </DoubleLayout>

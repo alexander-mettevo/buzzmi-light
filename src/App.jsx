@@ -6,6 +6,8 @@ import Support from "./components/pages/support/Support.jsx";
 import BaseLayout from "./components/layouts/baseLayout/BaseLayout.jsx";
 import Dashboard from "./components/pages/dashboard/Dashboard.jsx";
 import Modal from "./components/modal/Modal.jsx";
+import Registration from "./components/pages/registration/Registration.jsx";
+import AuthLayout from "./components/layouts/authLayout/AuthLayout.jsx";
 
 const App = () => {
   return (
@@ -15,8 +17,12 @@ const App = () => {
           <Route path="/" element={<Dashboard/>}/>
         </Route>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/registration" element={<Registration/>}/>
         <Route path="/other-services" element={<OtherServices/>}/>
         <Route path="/support" element={<Support/>}/>
+        <Route path="/auth" element={<AuthLayout/>}>
+          <Route path="/auth/code" element={<></>}/>
+        </Route>
       </Routes>
       <Modal/>
     </>
