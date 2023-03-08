@@ -1,0 +1,104 @@
+.tooltip-trigger {
+  position: relative;
+  display: inline;
+}
+
+.tooltip-trigger .tooltip{
+  min-width: 100%;
+  background-color: var(--main-bg);
+  color: var(--text-secondary);
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  z-index: 1;
+  white-space: nowrap;
+
+
+  box-shadow: 2px 2px 2px var(--items-box-shadow);
+  border-radius: 3px;
+}
+
+.tooltip-right{
+  top: -5px;
+  left: 105%;
+}
+
+
+.tooltip-left{
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip-top{
+  bottom:105%;
+  left:0%;
+}
+
+.tooltip-bottom{
+  top:105%;
+  left:0%;
+}
+
+.tooltip-trigger .tooltip{
+  opacity: 0;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+}
+
+.tooltip-trigger:hover .tooltip {
+  opacity:1;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 5px;
+}
+
+//Arrow for tooltip
+//.tooltip-trigger .tooltip-top::after {
+//  content: " ";
+//  position: absolute;
+//  top: 100%;
+//  left: 50%;
+//  margin-left: -5px;
+//  border-width: 5px;
+//  border-style: solid;
+//  border-color: black transparent transparent transparent;
+//}
+//
+//
+//.tooltip-trigger .tooltip-bottom::after {
+//  content: " ";
+//  position: absolute;
+//  bottom: 100%;
+//  left: 50%;
+//  margin-left: -5px;
+//  border-width: 5px;
+//  border-style: solid;
+//  border-color: transparent transparent black transparent;
+//}
+//
+//
+//.tooltip-trigger .tooltip-right::after{
+//  content: " ";
+//  position: absolute;
+//  top: 50%;
+//  right: 100%;
+//  margin-top: -5px;
+//  border-width: 5px;
+//  border-style: solid;
+//  border-color: transparent black transparent transparent;
+//}
+//
+//
+//.tooltip-trigger .tooltip-left::after{
+//  content: " ";
+//  position: absolute;
+//  top: 50%;
+//  left: 100%;
+//  margin-top: -5px;
+//  border-width: 5px;
+//  border-style: solid;
+//  border-color: transparent  transparent transparent black;
+//}

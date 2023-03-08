@@ -1,0 +1,30 @@
+.reports {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+
+  &__top {
+    @include adaptiveValue('margin-bottom', 50, 30);
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    @include adaptiveValue('margin-bottom', 42, 24);
+  }
+
+  &__select-title {
+    @include adaptiveValue('margin-bottom', 26, 16);
+  }
+
+  &__list {
+
+    li {
+      @include adaptiveValue('margin-bottom', 20, 15);
+      color: var(--main-secondary-text)
+    }
+  }
+}

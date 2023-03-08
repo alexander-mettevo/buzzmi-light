@@ -6,4 +6,13 @@
   font-size: 18px;
   line-height: 22px;
   font-weight: 600;
+
+  &__icon {
+    margin-right: 10px;
+    transform: rotate(180deg);
+    background-image: var(--primary);
+    background-clip: text;
+    color: transparent;
+    font-size: 23px;
+  }
 }

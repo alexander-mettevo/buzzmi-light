@@ -8,7 +8,7 @@ import QuadServicesButtons from "./items/serviceButtons/QuadServicesButtons.jsx"
 
 const Login = () => {
   return (
-    <DoubleLayout>
+    <DoubleLayout hideSupportBtn>
       <div>
         <Logo subtitle='Welcome to'/>
       </div>

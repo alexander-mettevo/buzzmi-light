@@ -1,0 +1,20 @@
+.support {
+
+  &__helper {
+
+    svg {
+      fill: transparent;
+    }
+
+    svg > path {
+
+      stroke: var(--text-secondary)
+    }
+
+    &_opposite {
+      svg > path {
+        stroke: var(--main-opposite-text)
+      }
+    }
+  }
+}

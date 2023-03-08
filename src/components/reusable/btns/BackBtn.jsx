@@ -5,6 +5,7 @@ const BackBtn = () => {
 
   return (
    <button className='back-btn' onClick={() => navigate(-1)}>
+     <i className="back-btn__icon fa-solid fa-arrow-right"></i>
      <span className='text-primary'>To Back</span>
    </button>
   );

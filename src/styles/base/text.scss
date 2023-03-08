@@ -22,7 +22,7 @@
 .h4 {
   font-weight: 700;
 
-  @include adaptiveValue('font-size', 28, 22);
+  @include adaptiveValue('font-size', 28, 20);
   @include adaptiveValue('line-height', 34, 28);
 }
 
@@ -94,6 +94,9 @@
   color: var(--success-color);
 }
 
+.text-alert {
+  color: var(--alter-text);
+}
 // Position text
 
 .text-center {
