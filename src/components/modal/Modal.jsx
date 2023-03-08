@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import ReactPortal from "./ReactPortal.jsx";
 import {CSSTransition} from "react-transition-group";
 import {useDispatch, useSelector} from "react-redux";
-import renderContent from "./renderContent.js";
+import renderContent from "./renderContent.jsx";
 import {closeModal} from "../../store/slices/modalSlice/modalSlice.js";
 
 function Modal() {

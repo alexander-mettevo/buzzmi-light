@@ -8,9 +8,12 @@ const renderContent = (name, props) => {
     Report
   }
 
-
-  if (!contentMap[name]) return null;
-  return contentMap[name](props);
+  return (
+    <>
+      {!!contentMap[name] && contentMap[name](props)}
+    </>
+  )
+   ;
 }
 
 export default renderContent;

@@ -32,7 +32,8 @@
     flex-direction: column;
 
 
-    @include adaptiveValue('padding', 40, 20);
+    @include adaptiveValue('padding-top', 40, 20);
+    @include adaptiveValue('padding-bottom', 40, 20);
 
     @media (max-width: $tablet) {
       width: 100vw;
@@ -44,11 +45,17 @@
   &__content {
     flex: 1;
     overflow-y: auto;
+
+    @include adaptiveValue('padding-left', 40, 20);
+    @include adaptiveValue('padding-right', 40, 20);
   }
 
   &__close {
     text-align: right;
     margin-bottom: 12px;
+
+    @include adaptiveValue('padding-left', 40, 20);
+    @include adaptiveValue('padding-right', 40, 20);
 
     &-icon {
       margin: 0;
