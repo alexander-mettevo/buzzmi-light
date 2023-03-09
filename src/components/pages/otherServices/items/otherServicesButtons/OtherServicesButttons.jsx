@@ -19,7 +19,7 @@ const OtherServicesButtons = () => {
   }
 
   return (
-    <div className='login-service'>
+    <div className='services'>
       <RegularButton icon={<GoogleSvg/>} className='_fw' onClick={handleGoogleClick}>Continue with Google</RegularButton>
       <RegularButton icon={<FacebookSvg/>} className='_fw' onClick={handleFacebookClick}>Continue with Facebook</RegularButton>
       <RegularButton icon={<AppleSvg/>} className='_fw' onClick={handleAppleClick}>Continue with Apple</RegularButton>

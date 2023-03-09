@@ -8,6 +8,7 @@ import Dashboard from "./components/pages/dashboard/Dashboard.jsx";
 import Modal from "./components/modal/Modal.jsx";
 import Registration from "./components/pages/registration/Registration.jsx";
 import AuthLayout from "./components/layouts/authLayout/AuthLayout.jsx";
+import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword.jsx";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/support" element={<Support/>}/>
         <Route path="/auth" element={<AuthLayout/>}>
           <Route path="/auth/code" element={<></>}/>
+          <Route path="/auth/forgot-password" element={<ForgotPassword/>}/>
         </Route>
       </Routes>
       <Modal/>

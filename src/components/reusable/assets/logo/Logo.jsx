@@ -1,8 +1,9 @@
 import React from 'react';
 import LogoSVG from "./LogoSVG.jsx";
+import {Link} from "react-router-dom";
 const Logo = ({subtitle}) => {
   return (
-    <div className='logo'>
+    <Link to='/' className='logo'>
       <div>
         <LogoSVG/>
       </div>
@@ -10,7 +11,7 @@ const Logo = ({subtitle}) => {
         {subtitle && <div className={'h4'}>{subtitle}</div>}
         <div className={'h2'}>BUZZMI</div>
       </div>
-    </div>
+    </Link>
   );
 };
 

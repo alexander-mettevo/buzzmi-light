@@ -15,7 +15,7 @@ const Registration = () => {
         </div>
         <div className='h3 text-center registration__title'>Let’s get you set up</div>
         <QuadServicesButtons/>
-        <div className='login__or'>or</div>
+        <div className='login__assets'>or</div>
         <Link to={'/'} className='registration__btn'>
           <PrimaryButton type='submit'>Signup with Phone or Email</PrimaryButton>
         </Link>

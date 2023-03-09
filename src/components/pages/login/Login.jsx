@@ -15,7 +15,7 @@ const Login = () => {
       <div className='form-wrapper'>
         <div className="form form_bg">
           <LoginForms/>
-          <div className='login__or'>or</div>
+          <div className='login__assets'>or</div>
           <QuadServicesButtons/>
           <div className='text-center text-r'>
             <span className={'text-secondary'}>Don’t have an account?</span>

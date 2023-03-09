@@ -6,6 +6,16 @@
   svg {
     @include adaptiveValue('width', 90, 55);
     @include adaptiveValue('height', 100, 62);
+
+      path:nth-child(1) {
+        fill: var(--main-one-paint);
+      }
+      path:nth-child(2) {
+        fill: var(--main-two-paint);
+      }
+      path:nth-child(3) {
+        fill: var(--main-three-paint);
+      }
   }
 
   &__text {
@@ -19,12 +29,38 @@
       background-image: var(--logo-text);
       background-clip: text;
       font-family: 'Outer-Sans', sans-serif;
-      font-weight: 500;
+      font-weight: 600;
       color: transparent;
 
       @include adaptiveValue('letter-spacing', 6, 3);
       @include adaptiveValue('font-size', 45, 33);
       @include adaptiveValue('line-height', 45, 33);
     }
+  }
+}
+
+.logo-h {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    path:nth-child(1) {
+      fill: var(--one-paint);
+    }
+    path:nth-child(2) {
+      fill: var(--two-paint);
+    }
+    path:nth-child(3) {
+      fill: var(--three-paint);
+    }
+  }
+
+  span {
+    font-family: 'Outer-Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--main-opposite-text);
   }
 }

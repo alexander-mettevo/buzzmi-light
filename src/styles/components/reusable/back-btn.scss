@@ -2,10 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 23px;
   width: 100%;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 600;
+
+  &__content {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+  }
 
   &__icon {
     margin-right: 10px;

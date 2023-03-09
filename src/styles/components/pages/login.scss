@@ -6,16 +6,29 @@
   }
 
   &__form {
-    @include adaptiveValue('margin-bottom', 22, 16);
+    text-align: center;
   }
 
-  &__or {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
+  &__forgot {
+    display: inline-block;
 
+    a {
+      display: inline-block;
+    }
+  }
+
+  &__assets {
     @include adaptiveValue('margin-bottom', 20, 16);
     @include adaptiveValue('font-size', 18, 14);
     @include adaptiveValue('line-height', 22, 18);
+    color: var(--text-secondary);
+
+
+    text-align: center;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    //margin: 0 auto;
+
   }
 
   &__btn {
