@@ -1,13 +1,22 @@
 import React, {useRef} from "react";
 
-const CodeInput = ({inactive, success}) => {
+const CodeInput = ({inactive, success, setCode, index, setValue}) => {
   const inputRef = useRef();
 
   const handleInput = (e) => {
     const value = e.target.value;
 
+
     if (/^\d{0,1}$/.test(value)) {
       inputRef.current.value = value;
+      setCode((prev) => {
+        const newCode = [...prev];
+        newCode[index] = value;
+        setValue('code', newCode.join(''));
+        return newCode;
+      });
+
+
       inputRef.current.blur();
 
       if (inputRef.current.nextElementSibling) {
@@ -15,6 +24,12 @@ const CodeInput = ({inactive, success}) => {
       }
     } else {
       inputRef.current.value = "";
+      setCode((prev) => {
+        const newCode = [...prev];
+        newCode[index] = "";
+        setValue('code', newCode.join(''));
+        return newCode;
+      })
     }
   };
 

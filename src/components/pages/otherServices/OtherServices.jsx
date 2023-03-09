@@ -1,7 +1,7 @@
 import React from 'react';
 import DoubleLayout from "../../layouts/doubleLayout/DoubleLayout.jsx";
 import OtherServicesButtons from "./items/otherServicesButtons/OtherServicesButttons.jsx";
-import BackBtn from "../../reusable/btns/BackBtn.jsx";
+import BackBtn from "../../reusable/btns/backBtn/BackBtn.jsx";
 import Modal from "../../modal/Modal.jsx";
 
 const OtherServices = () => {

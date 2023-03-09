@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 const userAPI = createApi({
   reducerPath: 'userAPI',
@@ -10,7 +10,28 @@ const userAPI = createApi({
         method: 'POST',
         body: user
       })
-    })
+    }),
+    forgotPassword: build.mutation({
+      query: (identifier) => ({
+        url: '/forgot-password',
+        method: 'POST',
+        body: identifier
+      })
+    }),
+    confirmForgotPassword: build.mutation({
+      query: (data) => ({
+        url: '/confirm-forgot-password',
+        method: 'POST',
+        body: data
+      })
+    }),
+    resetPassword: build.mutation({
+      query: (data) => ({
+        url: '/reset-password',
+        method: 'POST',
+        body: data
+      })
+    }),
   })
 })
 

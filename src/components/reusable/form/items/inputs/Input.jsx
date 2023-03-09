@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = ({errors, success, inactive, label, alterAction, name, register, ...props}) => {
+const Input = ({errors, success, inactive, label, alterAction, name, register, objectValidation, ...props}) => {
 //todo write validation
   return (
     <div className={'input-wrapper'}>
@@ -13,7 +13,7 @@ const Input = ({errors, success, inactive, label, alterAction, name, register, .
           type="text"
           className={`input input_simple-text ${inactive ? '_inactive' : ''} ${errors ? '_form-error' : ''} ${success ? '_form-success' : ''}`}
           placeholder={'Test placeholder'}
-          {...register(name)}
+          {...register(name, objectValidation)}
           {...props}
         />
       </label>

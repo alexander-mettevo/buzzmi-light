@@ -3,7 +3,7 @@ import Input from "../../../../reusable/form/items/inputs/Input.jsx";
 import PrimaryButton from "../../../../reusable/form/items/buttons/PrimaryButton.jsx";
 import {yupResolver} from '@hookform/resolvers/yup';
 import {useForm} from "react-hook-form";
-import {loginSchema} from "./validationSchema.js";
+import {loginSchema} from "../../../../../validationsSchems/login.js";
 import userAPI from "../../../../../store/services/UserService.js";
 import Form from "../../../../reusable/form/Form.jsx";
 import {Link} from "react-router-dom";

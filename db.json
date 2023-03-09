@@ -1,0 +1,168 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "forgot-password": [
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "id": 1
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "id": 2
+    },
+    {
+      "identifier": "Artem.web.developer.it@gmail.com",
+      "id": 3
+    },
+    {
+      "identifier": "Artem.web.developer.it@gmail.com",
+      "id": 4
+    },
+    {
+      "identifier": "Artem.web.developer.it@gmail.com",
+      "id": 5
+    },
+    {
+      "identifier": "alexander@ontheline.digital",
+      "id": 6
+    },
+    {
+      "identifier": "01antizyk.it@gmail.com",
+      "id": 7
+    },
+    {
+      "identifier": "wdsmusicofficial@gmail.com",
+      "id": 8
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "id": 9
+    },
+    {
+      "identifier": "Artem.web.developer.it@gmail.com",
+      "id": 10
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "id": 11
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "id": 12
+    },
+    {
+      "identifier": "01antizyk.it@gmail.com",
+      "id": 13
+    },
+    {
+      "identifier": "+38099703208",
+      "id": 14
+    },
+    {
+      "identifier": "tarasdev1024@gmail.com",
+      "id": 15
+    },
+    {
+      "identifier": "",
+      "id": 16
+    },
+    {
+      "identifier": "",
+      "id": 17
+    },
+    {
+      "identifier": "",
+      "id": 18
+    },
+    {
+      "identifier": "wdsmusicofficial@gmail.com",
+      "id": 19
+    },
+    {
+      "identifier": "wdsmusicofficial@gmail.com",
+      "id": 20
+    },
+    {
+      "identifier": "",
+      "id": 21
+    },
+    {
+      "identifier": "tarasdev1024@gmail.com",
+      "id": 22
+    },
+    {
+      "identifier": "",
+      "id": 23
+    },
+    {
+      "identifier": "",
+      "id": 24
+    },
+    {
+      "identifier": "",
+      "id": 25
+    },
+    {
+      "identifier": "",
+      "id": 26
+    },
+    {
+      "identifier": "",
+      "id": 27
+    },
+    {
+      "identifier": "",
+      "id": 28
+    },
+    {
+      "identifier": "tarasdev1024@gmail.com",
+      "id": 29
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "id": 30
+    }
+  ],
+  "confirm-forgot-password": [
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "code": "111111",
+      "id": 1
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "code": "111111",
+      "id": 2
+    },
+    {
+      "identifier": "sashamatvienko0@gmail.com",
+      "code": "555555",
+      "id": 3
+    }
+  ]
+}

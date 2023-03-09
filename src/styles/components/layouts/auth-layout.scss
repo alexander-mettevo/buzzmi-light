@@ -1,7 +1,16 @@
 .auth-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   &__header {
     background: var(--layout-bg);
     color: var(--main-opposite-text);
+    //position: fixed;
+    //top: 0;
+    //left: 0;
+    //right: 0;
+    //z-index: 1;
 
     &-container {
       height: 80px;
@@ -19,9 +28,13 @@
 
     &_m {
       display: none;
+      height: 60px;
+      padding: 0 16px;
 
       @media (max-width: $tablet) {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
     }
   }
@@ -32,18 +45,61 @@
   }
 
   &_container {
-    max-width: 420px;
+    max-width: 480px;
     padding: 0 16px 24px;
     margin: 0 auto;
-    height: calc(100vh - 80px);
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     @media (max-width: $tablet) {
       height: calc(100vh - 65px);
+      padding: 0 16px 24px;
+    }
+  }
+}
+
+.content-auth {
+
+  &__column {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
     }
   }
 
+  &__title {
+    @include adaptiveValue('margin-bottom', 40, 15);
+
+    &_login {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    @include adaptiveValue('margin-bottom', 60, 20);
+  }
+
+  &__form {
+    @media (max-width: $tablet) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__resend-code {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: $tablet) {
+      margin-top: 5px;
+    }
+  }
 }

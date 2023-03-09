@@ -9,6 +9,8 @@ import Modal from "./components/modal/Modal.jsx";
 import Registration from "./components/pages/registration/Registration.jsx";
 import AuthLayout from "./components/layouts/authLayout/AuthLayout.jsx";
 import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword.jsx";
+import ForgotCode from "./components/pages/forgotCode/ForgotCode.jsx";
+import ResetPassword from "./components/pages/resetPassword/ResetPassword.jsx";
 
 const App = () => {
   return (
@@ -22,8 +24,9 @@ const App = () => {
         <Route path="/other-services" element={<OtherServices/>}/>
         <Route path="/support" element={<Support/>}/>
         <Route path="/auth" element={<AuthLayout/>}>
-          <Route path="/auth/code" element={<></>}/>
+          <Route path="/auth/forgot-code" element={<ForgotCode/>}/>
           <Route path="/auth/forgot-password" element={<ForgotPassword/>}/>
+          <Route path="/auth/reset-password" element={<ResetPassword/>}/>
         </Route>
       </Routes>
       <Modal/>

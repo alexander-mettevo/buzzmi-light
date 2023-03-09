@@ -2,10 +2,16 @@ import React from 'react';
 import {Outlet} from "react-router-dom";
 import HeaderLogo from "../../reusable/assets/logo/headerLogo/HeaderLogo.jsx";
 import SupportBtn from "../../reusable/btns/supportBtn/SupportBtn.jsx";
+import BackBtnMobile from "../../reusable/btns/backBtn/BackBtnMobile.jsx";
+import BackBtn from "../../reusable/btns/backBtn/BackBtn.jsx";
 
 const AuthLayout = () => {
   return (
     <div className='auth-layout'>
+      <div className='auth-layout__header_m'>
+        <BackBtnMobile/>
+        <SupportBtn/>
+      </div>
       <div className='auth-layout__header'>
         <div className='auth-layout__header-container'>
           <div></div>
@@ -17,6 +23,7 @@ const AuthLayout = () => {
       </div>
       <div className='auth-layout_container'>
         <Outlet/>
+        <BackBtn/>
       </div>
     </div>
   );

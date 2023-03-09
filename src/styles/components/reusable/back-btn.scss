@@ -5,6 +5,25 @@
   margin-top: 23px;
   width: 100%;
 
+
+
+
+  &_d {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &_m {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: inline-block;
+      margin-top: 0;
+      width: auto;
+    }
+  }
+
   &__content {
     font-size: 18px;
     line-height: 22px;
@@ -20,5 +39,9 @@
     background-clip: text;
     color: transparent;
     font-size: 23px;
+
+    @media (max-width: $tablet) {
+      font-size: 33px;
+    }
   }
 }
