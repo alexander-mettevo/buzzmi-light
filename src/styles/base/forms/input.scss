@@ -10,7 +10,7 @@ textarea {
 }
 
 .input-wrapper {
- @include adaptiveValue('margin-bottom', 18, 24);
+  @include adaptiveValue('margin-bottom', 18, 24);
 }
 
 .input-code-wrapper {
@@ -130,4 +130,44 @@ textarea {
 textarea.input {
   resize: none;
   padding: 0px 0px;
+}
+
+.validation-list {
+  text-align: left;
+  display: inline-block;
+  margin: 9px auto 0;
+
+  &__item {
+    margin-bottom: 5px;
+    padding-left: 14px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 0;
+      display: block;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &_error {
+      color: var(--error-color);
+
+      &:before {
+        background: url('/public/images/assets/error.svg') center / contain no-repeat;
+      }
+    }
+
+    &_success {
+      color: var(--success-color);
+
+      &:before {
+        background: url('/public/images/assets/success.svg') center / contain no-repeat;
+      }
+    }
+  }
 }

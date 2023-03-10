@@ -10,3 +10,13 @@ export const options = [
   {label: <div className={'select__item'}><img className={'select__icon'} src="https://hatscripts.github.io/circle-flags/flags/in.svg" width="48"/><span>Hindi</span></div>, value: "in"},
   {label: <div className={'select__item'}><img className={'select__icon'} src="https://hatscripts.github.io/circle-flags/flags/ng.svg" width="48"/><span>Nigerian Pidgin</span></div>, value: "ng"},
 ];
+
+export const phoneNumbersCode = [
+  {label: <div className={'select__item'}>US &nbsp;<span>+1</span></div>, value: "us"},
+  {label: <div className={'select__item'}>UA &nbsp;<span>+380</span></div>, value: "ua"},
+  {label: <div className={'select__item'}>PL &nbsp;<span>+48</span></div>, value: "pl"},
+  {label: <div className={'select__item'}>CN &nbsp;<span>+86</span></div>, value: "cn"},
+  {label: <div className={'select__item'}>GB &nbsp;<span>+44</span></div>, value: "gb"},
+  {label: <div className={'select__item'}>ID &nbsp;<span>+62</span></div>, value: "id"},
+  {label: <div className={'select__item'}>IN &nbsp;<span>+91</span></div>, value: "in"},
+]

@@ -5,8 +5,8 @@ import {store} from "./store/store.js";
 import './styles/style.scss'
 import App from "./App.jsx";
 import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-dom";
-import Login from "./components/pages/login/Login.jsx";
-import OtherServices from "./components/pages/otherServices/OtherServices.jsx";
+import Login from "./components/pages/auth/login/Login.jsx";
+import OtherServices from "./components/pages/auth/otherServices/OtherServices.jsx";
 import Support from "./components/pages/support/Support.jsx";
 import BaseLayout from "./components/layouts/baseLayout/BaseLayout.jsx";
 import Dashboard from "./components/pages/dashboard/Dashboard.jsx";

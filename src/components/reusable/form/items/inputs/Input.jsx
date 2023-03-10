@@ -20,9 +20,11 @@ const Input = ({errors, success, inactive, label, alterAction, name, register, o
       <div>
         {errors && <div className={'text-error text-center'}>{errors.message}</div>}
       </div>
-      {/*<ul>*/}
-      {/*  validation list*/}
-      {/*</ul>*/}
+      <ul className='validation-list text-s'>
+        <li className='validation-list__item validation-list__item_success '> from 8 to 20 characters</li>
+        <li className='validation-list__item validation-list__item_error'> contain at least one upper case latter</li>
+        <li className='validation-list__item validation-list__item_error'> contain at least one special character</li>
+      </ul>
 
       <div className={'input-alter-action'}>
         {alterAction}

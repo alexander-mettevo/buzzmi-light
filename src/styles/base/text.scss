@@ -82,6 +82,12 @@
   color: transparent;
 }
 
+.text-alt-primary {
+  background-image: var(--primary-text);
+  background-clip: text;
+  color: transparent;
+}
+
 .text-secondary {
   color: var(--text-secondary);
 }
@@ -109,4 +115,12 @@
 
 .text-left {
   text-align: left;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
 }

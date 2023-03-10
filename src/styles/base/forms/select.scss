@@ -67,3 +67,79 @@
     }
   }
 }
+
+.phone-select {
+  width: 480px;
+  height: 50px;
+  //max-width: min(100%, 420px);
+  border-radius: 20px !important;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  border: 1px solid var(--input-border) !important;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 15px !important;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    font-weight: 500;
+  }
+
+  & > *:focus-within {
+    outline: none;
+  }
+
+  &__select {
+    width: 125px;
+    background: var(--main-bg);
+
+    & > *:focus-within {
+      outline: none;
+    }
+
+    .phone-select__control {
+      border: none !important;
+
+      &:focus-within {
+        outline: none;
+        border-color: transparent !important;
+        box-shadow: none !important;
+      }
+    }
+
+    .phone-select__indicator-separator {
+      display: none !important;
+    }
+
+    .select__arrow {
+      background-image: var(--primary);
+      background-clip: text;
+      color: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .phone-select__control--menu-is-open {
+        .select__arrow {
+          transform: rotate(180deg);
+          background-image: var(--primary);
+          background-clip: text;
+          color: transparent;
+        }
+    }
+  }
+
+  &__input {
+
+
+    &::placeholder {
+      color: var(--text-secondary);
+      transition: opacity 0.3s;
+    }
+
+    flex: 1;
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 1px solid var(--bg-secondary);
+  }
+}

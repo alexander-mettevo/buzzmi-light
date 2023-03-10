@@ -1,0 +1,48 @@
+.subscription-card {
+  padding: 20px;
+
+  @media (max-width: $tablet) {
+    padding: 20px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+  }
+
+  &__discount {
+    position: relative;
+    width: 102px;
+    height: 28px;
+    background: linear-gradient(113.36deg, #FF41B3 19.17%, #7E00E0 84.92%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--main-opposite-text);
+    border-radius: 3px 0 0 3px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: -17px;
+      width: 22px;
+      height: 21px;
+      transform: rotate(45deg) translateY(-50%);
+      border-radius: 3px;
+      background: #FF41B3;
+      z-index: -1;
+    }
+  }
+}

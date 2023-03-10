@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Select from 'react-select';
 
-const DropdownIndicator = () => {
+export const DropdownIndicator = () => {
   return (
   <i className="fa-solid fa-chevron-down select__arrow"/>
   );

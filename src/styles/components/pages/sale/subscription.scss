@@ -1,0 +1,74 @@
+.subscription {
+  .h5 {
+    margin-bottom: 10px;
+  }
+
+  & > .text-r {
+    margin-bottom: 22px;
+  }
+
+  & > .h6 {
+    margin-bottom: 2px;
+  }
+
+  & > h2 {
+    margin-bottom: 15px;
+  }
+
+  &__timer {
+    font-weight: 800;
+    margin-bottom: 30px;
+    @include adaptiveValue('font-size', 60, 47);
+    @include adaptiveValue('margin-bottom', 30, 20);
+  }
+
+  &__img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    transform: translateX(-10px);
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+  }
+
+  .circle-counter {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--main-opposite-text);
+
+    &__top {
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    &__bottom {
+      font-size: 7px;
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__promotion {
+    @include adaptiveValue('margin-bottom', 40, 20);
+  }
+}

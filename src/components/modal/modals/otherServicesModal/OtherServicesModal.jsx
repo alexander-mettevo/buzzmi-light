@@ -1,5 +1,5 @@
 import React from 'react';
-import OtherServicesButtons from "../../../pages/otherServices/items/otherServicesButtons/OtherServicesButttons.jsx";
+import OtherServicesButtons from "../../../pages/auth/otherServices/items/otherServicesButtons/OtherServicesButttons.jsx";
 
 const OtherServicesModal = () => {
   console.log('OtherServicesModal');
