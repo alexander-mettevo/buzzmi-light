@@ -4,6 +4,8 @@
 - [x] [Chose another social service](https://buzzmi-light.vercel.app/other-services)
 - [x] [Subscription](https://buzzmi-light.vercel.app/sales)
 - [x] [Subscription v2](https://buzzmi-light.vercel.app/sales/v2)
+- [x] [Pay page](https://buzzmi-light.vercel.app/sales/pay)
+- [x] [Mobile pay form](https://buzzmi-light.vercel.app/sales/mobile-pay)
 - [x] [Forgot Your Password?](https://buzzmi-light.vercel.app/auth/forgot-password)
 - [x] [Forgot Your Password code](https://buzzmi-light.vercel.app/auth/forgot-code)
 - [x] [Forgot Your Password code](https://buzzmi-light.vercel.app/auth/forgot-code)
