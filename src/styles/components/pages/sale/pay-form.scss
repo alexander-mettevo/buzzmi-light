@@ -1,0 +1,65 @@
+.pay-form {
+
+  @media (max-width: $tablet) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__header {
+    padding-bottom: 21px;
+    border-bottom: 2px solid var(--bg-secondary);
+    margin-bottom: 21px;
+  }
+
+  &__row-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  &__count {
+    border-top: 2px solid var(--bg-secondary);
+    border-bottom: 2px solid var(--bg-secondary);
+
+
+    @include adaptiveValue('padding-top', 40, 32);
+    @include adaptiveValue('padding-bottom', 40, 32);
+    @include adaptiveValue('margin-bottom', 40, 20);
+
+
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__total {
+    font-weight: 400;
+    margin-left: 37px;
+
+    @include adaptiveValue('font-size', 20, 16);
+  }
+
+  &__note {
+    margin-top: 20px;
+
+    p {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

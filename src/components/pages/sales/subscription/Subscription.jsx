@@ -57,8 +57,8 @@ const Subscription = () => {
         </div>
       </div>
 
-      <Link to='/' className='subscription__btn'>
-        <PrimaryButton className=''>Start my 7-days trial</PrimaryButton>
+      <Link to='/sales/pay' className='subscription__btn'>
+        <PrimaryButton>Start my 7-days trial</PrimaryButton>
       </Link>
       <Link to='/' className='text-secondary  text-uppercase h6'>
         SKIP TRIAL

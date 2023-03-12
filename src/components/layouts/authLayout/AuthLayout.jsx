@@ -5,7 +5,7 @@ import SupportBtn from "../../reusable/btns/supportBtn/SupportBtn.jsx";
 import BackBtnMobile from "../../reusable/btns/backBtn/BackBtnMobile.jsx";
 import BackBtn from "../../reusable/btns/backBtn/BackBtn.jsx";
 
-const AuthLayout = () => {
+const AuthLayout = ({bigDesk}) => {
   return (
     <div className='auth-layout'>
       <div className='auth-layout__header_m'>
@@ -21,7 +21,7 @@ const AuthLayout = () => {
           </div>
         </div>
       </div>
-      <div className='auth-layout_container'>
+      <div className={`auth-layout__container ${bigDesk ? 'auth-layout__container_b' : ''}`}>
         <Outlet/>
         <BackBtn/>
       </div>

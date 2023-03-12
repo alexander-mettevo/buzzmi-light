@@ -62,8 +62,8 @@ const SubscriptionV2 = () => {
         </p>
       </div>
 
-      <Link to='/' className='subscription__btn'>
-        <PrimaryButton className=''>Subscribe</PrimaryButton>
+      <Link to='/sales/pay' className='subscription__btn'>
+        <PrimaryButton>Subscribe</PrimaryButton>
       </Link>
     </div>
   );

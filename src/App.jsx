@@ -14,6 +14,8 @@ import ResetPassword from "./components/pages/auth/resetPassword/ResetPassword.j
 import Test from "./components/pages/test/Test.jsx";
 import Subscription from "./components/pages/sales/subscription/Subscription.jsx";
 import SubscriptionV2 from "./components/pages/sales/subscription/SubscriptionV2.jsx";
+import Pay from "./components/pages/sales/pay/Pay.jsx";
+import MobilePay from "./components/pages/sales/pay/MobilePay.jsx";
 
 const App = () => {
   return (
@@ -26,9 +28,13 @@ const App = () => {
         <Route path="/registration" element={<Registration/>}/>
         <Route path="/other-services" element={<OtherServices/>}/>
         <Route path="/support" element={<Support/>}/>
+        <Route path="/sales" element={<AuthLayout bigDesk/>}>
+          <Route path="/sales/pay" element={<Pay/>}/>
+        </Route>
         <Route path="/sales" element={<AuthLayout/>}>
           <Route path="/sales" element={<Subscription/>}/>
           <Route path="/sales/v2" element={<SubscriptionV2/>}/>
+          <Route path="/sales/mobile-pay" element={<MobilePay/>}/>
         </Route>
         <Route path="/auth" element={<AuthLayout/>}>
           <Route path="/auth/forgot-code" element={<ForgotCode/>}/>

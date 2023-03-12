@@ -64,13 +64,22 @@ textarea {
   display: block;
   border-radius: 20px;
   font-weight: 500;
-  font-size: 17px;
-  line-height: 21px;
   border: 1px solid var(--input-border);
   transition: all 0.3s ease-in-out;
 
+  @include adaptiveValue('font-size', 17, 12);
+  @include adaptiveValue('line-height', 21, 14);
+
+  @media (max-width: $mobile) {
+    font-weight: 400;
+  }
+
   &_simple-text {
     padding: 14px 24px;
+
+    @media (max-width: $mobile) {
+      padding: 12px 20px;
+    }
   }
 
   &_code {

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Input = ({errors, success, inactive, label, alterAction, name, register, objectValidation, ...props}) => {
+const Input = (args) => {
+  const {errors, success, inactive, label, alterAction, name, register, objectValidation, validList, placeholder, ...props} = args;
 //todo write validation
   return (
     <div className={'input-wrapper'}>
@@ -12,7 +13,7 @@ const Input = ({errors, success, inactive, label, alterAction, name, register, o
         <input
           type="text"
           className={`input input_simple-text ${inactive ? '_inactive' : ''} ${errors ? '_form-error' : ''} ${success ? '_form-success' : ''}`}
-          placeholder={'Test placeholder'}
+          placeholder={placeholder}
           {...register(name, objectValidation)}
           {...props}
         />
@@ -20,11 +21,13 @@ const Input = ({errors, success, inactive, label, alterAction, name, register, o
       <div>
         {errors && <div className={'text-error text-center'}>{errors.message}</div>}
       </div>
-      <ul className='validation-list text-s'>
-        <li className='validation-list__item validation-list__item_success '> from 8 to 20 characters</li>
-        <li className='validation-list__item validation-list__item_error'> contain at least one upper case latter</li>
-        <li className='validation-list__item validation-list__item_error'> contain at least one special character</li>
-      </ul>
+      {validList && (
+        <ul className='validation-list text-s'>
+          <li className='validation-list__item validation-list__item_success '> from 8 to 20 characters</li>
+          <li className='validation-list__item validation-list__item_error'> contain at least one upper case latter</li>
+          <li className='validation-list__item validation-list__item_error'> contain at least one special character</li>
+        </ul>
+      )}
 
       <div className={'input-alter-action'}>
         {alterAction}

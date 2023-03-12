@@ -1,0 +1,119 @@
+.pay {
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    @include adaptiveValue('margin-top', 40, 24);
+
+    & > div {
+      flex: 0 1 400px;
+    }
+
+    @media (max-width: $tablet) {
+      display: block;
+
+      & > div:last-child {
+        display: none;
+      }
+
+      & > div:first-child {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_arrow {
+     transform: rotate(-90deg);
+    }
+
+    &_text {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &_d {
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_m {
+      display: none;
+
+      @media (max-width: $tablet) {
+        display: flex;
+      }
+    }
+  }
+
+  &__btns-list {
+    margin-top: 17px;
+
+     li {
+      margin-bottom: 30px;
+
+       button {
+         min-height: auto;
+         height: 46px;
+       }
+    }
+  }
+
+  &__more-services {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__show-more {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    &_a {
+      max-height: 100vh;
+    }
+
+    &_m {
+      display: none;
+
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+  }
+
+
+
+  &__show-btn {
+    position: relative;
+    background: var(--main-bg);
+
+    span:last-child {
+      transition: all 0.3s ease-in-out;
+    }
+    &_a {
+      span:last-child {
+        //transform: translateY(-100%);
+      }
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
