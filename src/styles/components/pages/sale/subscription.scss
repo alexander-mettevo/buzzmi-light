@@ -71,4 +71,28 @@
   &__promotion {
     @include adaptiveValue('margin-bottom', 40, 20);
   }
+
+  &__cards {
+    margin-top: 20px;
+
+    & > div {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__note {
+    margin-bottom: 28px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

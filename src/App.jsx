@@ -13,6 +13,7 @@ import ForgotCode from "./components/pages/auth/forgotCode/ForgotCode.jsx";
 import ResetPassword from "./components/pages/auth/resetPassword/ResetPassword.jsx";
 import Test from "./components/pages/test/Test.jsx";
 import Subscription from "./components/pages/sales/subscription/Subscription.jsx";
+import SubscriptionV2 from "./components/pages/sales/subscription/SubscriptionV2.jsx";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/support" element={<Support/>}/>
         <Route path="/sales" element={<AuthLayout/>}>
           <Route path="/sales" element={<Subscription/>}/>
+          <Route path="/sales/v2" element={<SubscriptionV2/>}/>
         </Route>
         <Route path="/auth" element={<AuthLayout/>}>
           <Route path="/auth/forgot-code" element={<ForgotCode/>}/>

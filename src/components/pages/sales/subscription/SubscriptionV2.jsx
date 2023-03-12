@@ -1,11 +1,12 @@
 import React from 'react';
+import Timer from "../../../reusable/assets/timer/Timer.jsx";
 import SubscriptionCard from "./items/SubscriptionCard.jsx";
 import {HardCode} from "../../../reusable/assets/showMore/ShowMore.jsx";
-import Timer from "../../../reusable/assets/timer/Timer.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
 import {Link} from "react-router-dom";
+import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import SubscriptionOffer from "./items/subscriptionOffer/SubscriptionOffer.jsx";
 
-const Subscription = () => {
+const SubscriptionV2 = () => {
   return (
     <div className='subscription'>
       <div className='h5'>
@@ -40,13 +41,6 @@ const Subscription = () => {
       <div className='subscription__promotion'>
         <div className='subscription__cards'>
           <SubscriptionCard
-            title='Elite Creator'
-            discount={20}
-            icon={'/public/images/sale/star.png'}
-            text={"You can start to expand your business using our advanced technology, user-friendly platform, and dedicated customer support team."}
-            content={<HardCode/>}
-          />
-          <SubscriptionCard
             title='Premium Member'
             discount={40}
             icon={'/images/sale/target.png'}
@@ -55,16 +49,24 @@ const Subscription = () => {
             specialOffer='And Special offer'
           />
         </div>
+        <SubscriptionOffer/>
+      </div>
+
+      <div className='text-s text-secondary subscription__note'>
+        <p>
+          Billed Yearly. Cancel Anytime.
+          The subscription will automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. You can go to your Account settings to manage your subscription and turn off auto-renew.
+        </p>
+        <p>
+          If any problem, Please Contact Us in “Profile - FAQ & Feedback”.
+        </p>
       </div>
 
       <Link to='/' className='subscription__btn'>
-        <PrimaryButton className=''>Start my 7-days trial</PrimaryButton>
-      </Link>
-      <Link to='/' className='text-secondary  text-uppercase h6'>
-        SKIP TRIAL
+        <PrimaryButton className=''>Subscribe</PrimaryButton>
       </Link>
     </div>
   );
 };
 
-export default Subscription;
+export default SubscriptionV2;

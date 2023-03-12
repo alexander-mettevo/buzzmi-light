@@ -76,7 +76,7 @@
 }
 .lg-outer {
 	.lg-comment-overlay {
-		background-color: rgba(0, 0, 0, 0.25);
+		background-color: rgba(var(--items-box-shadow));
 		bottom: 0;
 		cursor: default;
 		left: 0;

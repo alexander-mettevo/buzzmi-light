@@ -158,7 +158,7 @@ textarea.input {
       color: var(--error-color);
 
       &:before {
-        background: url('/public/images/assets/error.svg') center / contain no-repeat;
+        background: url('/images/assets/error.svg') center / contain no-repeat;
       }
     }
 
@@ -166,7 +166,7 @@ textarea.input {
       color: var(--success-color);
 
       &:before {
-        background: url('/public/images/assets/success.svg') center / contain no-repeat;
+        background: url('/images/assets/success.svg') center / contain no-repeat;
       }
     }
   }

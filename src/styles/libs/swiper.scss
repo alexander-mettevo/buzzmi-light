@@ -330,7 +330,7 @@ button.swiper-pagination-bullet {
 	transition: 0.2s transform, 0.2s right;
 }
 .swiper-pagination-progressbar {
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(var(--items-box-shadow));
 	position: absolute;
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {

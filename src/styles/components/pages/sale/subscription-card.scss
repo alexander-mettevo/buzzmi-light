@@ -1,8 +1,25 @@
 .subscription-card {
   padding: 20px;
+  box-shadow: 0 1px 4px var(--items-box-shadow);
+  border-radius: 12px;
 
   @media (max-width: $tablet) {
-    padding: 20px 0;
+    padding: 20px 15px;
+
+    .subscription-card__discount-wrapper {
+      margin-right: -15px;
+    }
+  }
+
+  @media (max-width: $mobileSmall) {
+    padding: 10px;
+    .h5 {
+      text-align: left;
+    }
+
+    .subscription-card__discount-wrapper {
+      margin-right: -10px;
+    }
   }
 
   &__top {
@@ -15,7 +32,15 @@
       display: flex;
       align-items: center;
       gap: 7px;
+
+      .h5 {
+        margin-bottom: 0 !important;
+      }
     }
+  }
+
+  &__discount-wrapper {
+    margin-right: -20px;
   }
 
   &__discount {
