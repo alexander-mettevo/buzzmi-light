@@ -21,8 +21,10 @@
   }
 
   &._fw {
+    max-width: 460px;
     width: 100%;
   }
+
 
   &_primary {
     background: var(--btn-primary-bg);
@@ -44,7 +46,6 @@
   }
 
 
-
   &_alt-primary {
     position: relative;
     background: var(--main-bg);
@@ -58,7 +59,7 @@
       right: -1px;
       bottom: -1px;
       z-index: -2;
-      background-image: linear-gradient(to right, #FF41B3, #7E00E0);
+      background-image: var(--alt-primary-border);
       border-radius: inherit;
     }
   }
@@ -73,6 +74,18 @@
     background: inherit;
     transition: all 0.3s ease-in-out;
 
+
+    &_invite {
+      min-height: 20px;
+      font-size: 15px !important;
+      line-height: 18px !important;
+      font-weight: 500 !important;
+      padding: 4px 24px !important;
+
+      &:before {
+        padding: 2px !important;
+      }
+    }
 
     &:before {
       content: "";

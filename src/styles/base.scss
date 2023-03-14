@@ -1,10 +1,10 @@
-// Загальний файл елементів форм
-// Для підключення/відключення стилів конкретного елемента форми дивись base/forms/forms.scss
+@import "bootstrap";
 @import "base/forms/forms";
 @import "components/components";
 @import "assets/assets";
 @import "font-awesome/font-awesome";
 @import "base/scroll";
+
 
  //Стилі попапів
  @import "base/popup";

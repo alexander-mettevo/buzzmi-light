@@ -16,6 +16,12 @@ import Subscription from "./components/pages/sales/subscription/Subscription.jsx
 import SubscriptionV2 from "./components/pages/sales/subscription/SubscriptionV2.jsx";
 import Pay from "./components/pages/sales/pay/Pay.jsx";
 import MobilePay from "./components/pages/sales/pay/MobilePay.jsx";
+import ChoseRole from "./components/pages/profile/choseRole/ChoseRole.jsx";
+import AddCreators from "./components/pages/profile/addCreactors/AddCreators.jsx";
+import Interest from "./components/pages/profile/interest/Interest.jsx";
+import AddContacts from "./components/pages/profile/addUsers/AddContacts.jsx";
+import AddFriends from "./components/pages/profile/addUsers/AddFriends.jsx";
+import AddPeople from "./components/pages/profile/addUsers/AddPeople.jsx";
 
 const App = () => {
   return (
@@ -41,6 +47,12 @@ const App = () => {
           <Route path="/auth/forgot-password" element={<ForgotPassword/>}/>
           <Route path="/auth/reset-password" element={<ResetPassword/>}/>
           <Route path="/auth/test" element={<Test/>}/>
+          <Route path="/auth/chose-role" element={<ChoseRole/>}/>
+          <Route path="/auth/add-creators" element={<AddCreators/>}/>
+          <Route path="/auth/add-interest" element={<Interest/>}/>
+          <Route path="/auth/add-contacts" element={<AddContacts/>}/>
+          <Route path="/auth/add-friends" element={<AddFriends/>}/>
+          <Route path="/auth/add-people" element={<AddPeople/>}/>
         </Route>
       </Routes>
       <Modal/>

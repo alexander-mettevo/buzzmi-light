@@ -43,10 +43,10 @@ $containerPadding: 32;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поїнти
-$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
-$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
-$mobile: em(767.98); // Телефони L
-$mobileSmall: em(479.98); // Телефони S
+$pc: $containerWidth; // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: 992px; // Планшети, деякі телефони в горизонтальному положенні
+$mobile: 767px; // Телефони L
+$mobileSmall: 500px; // Телефони S
 
 // Тип адаптива:
 // 1 = чуйність (у контейнера немає брейкпоінтів),
@@ -129,10 +129,10 @@ body {
 		@media (max-width: $pc) {
 			max-width: rem(970);
 		}
-		@media (max-width: $tablet) {
+		@media (max-width: $mobileSmall) {
 			max-width: rem(750);
 		}
-		@media (max-width: $mobile) {
+		@media (max-width: $mobileSmall) {
 			max-width: none;
 			@if ($containerPadding>0 and $maxWidthContainer>0) {
 				padding: 0 rem(math.div($containerPadding, 2));

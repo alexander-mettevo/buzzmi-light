@@ -35,7 +35,7 @@
     @include adaptiveValue('padding-top', 40, 20);
     @include adaptiveValue('padding-bottom', 40, 20);
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobileSmall) {
       width: 100vw;
       min-height: 100vh;
       border-radius: 0;

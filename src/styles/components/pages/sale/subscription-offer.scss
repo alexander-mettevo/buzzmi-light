@@ -25,7 +25,7 @@
     }
 
     &_checked {
-      background-image: linear-gradient(to right, #FF41B3, #7E00E0);
+      background-image: var(--alt-primary-border);
       color: var(--main-opposite-text);
 
       .offer-item__special_offer {
@@ -58,7 +58,7 @@
       right: -1px;
       bottom: -1px;
       z-index: -2;
-      background-image: linear-gradient(to right, #FF41B3, #7E00E0);
+      background-image: var(--alt-primary-border);
       border-radius: inherit;
     }
 
@@ -101,7 +101,7 @@
     &__radio-wrapper {
       width: 28px; /* Change to the desired size */
       height: 28px; /* Change to the desired size */
-      background-image: linear-gradient(to right, #FF41B3, #7E00E0);
+      background-image: var(--alt-primary-border);
       border-radius: 50%; /* Make the radio button circular */
       padding: 2px;
     }
@@ -123,7 +123,7 @@
       }
 
       &:checked {
-        background-image: linear-gradient(to right, #FF41B3, #7E00E0);
+        background-image: var(--alt-primary-border);
       }
 
       &:focus {

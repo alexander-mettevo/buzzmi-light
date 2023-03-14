@@ -8,7 +8,7 @@
 	display: inline-block;
 	border-radius: 20px;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $mobileSmall) {
 		width: 100%;
 		padding: 0;
 	}
@@ -29,6 +29,20 @@
 	}
 	&__error {
 		margin-bottom: 8px;
+	}
+}
+
+.search-form {
+	position: relative;
+
+
+	&__btn {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		right: 19px;
+		transform: translateY(-50%);
+		font-size: 24px;
 	}
 }
 //</FORM>

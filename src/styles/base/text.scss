@@ -79,29 +79,29 @@
 .text-primary {
   background-image: var(--primary);
   background-clip: text;
-  color: transparent;
+  color: transparent !important;
 }
 
 .text-alt-primary {
   background-image: var(--primary-text);
   background-clip: text;
-  color: transparent;
+  color: transparent !important;
 }
 
 .text-secondary {
-  color: var(--text-secondary);
+  color: var(--text-secondary)  !important;
 }
 
 .text-error {
-  color: var(--error-color);
+  color: var(--error-color)  !important;
 }
 
 .text-success {
-  color: var(--success-color);
+  color: var(--success-color)  !important;
 }
 
 .text-alert {
-  color: var(--alter-text);
+  color: var(--alter-text)  !important;
 }
 // Position text
 

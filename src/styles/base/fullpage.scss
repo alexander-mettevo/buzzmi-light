@@ -12,7 +12,7 @@ body {
 	min-height: 100vh;
 	.touch & {
 		min-height: calc(var(--vh, 1vh) * 100);
-		@media (max-width: $mobile) {
+		@media (max-width: $mobileSmall) {
 			transition: height 0.2s;
 		}
 	}

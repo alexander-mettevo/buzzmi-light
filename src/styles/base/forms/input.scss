@@ -39,7 +39,7 @@ textarea {
     @include adaptiveValue('margin-bottom', 14, 10);
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $mobileSmall) {
     font-weight: 500;
   }
 }
@@ -54,7 +54,7 @@ textarea {
   background-clip: text;
   color: transparent;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $mobileSmall) {
     font-weight: 500;
   }
 }
@@ -70,14 +70,14 @@ textarea {
   @include adaptiveValue('font-size', 17, 12);
   @include adaptiveValue('line-height', 21, 14);
 
-  @media (max-width: $mobile) {
+  @media (max-width: $mobileSmall) {
     font-weight: 400;
   }
 
   &_simple-text {
     padding: 14px 24px;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $mobileSmall) {
       padding: 12px 20px;
     }
   }

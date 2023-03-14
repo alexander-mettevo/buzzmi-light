@@ -9,7 +9,7 @@
 
 
   &_d {
-    @media (max-width: $tablet) {
+    @media (max-width: $mobileSmall) {
       display: none;
     }
   }
@@ -17,7 +17,7 @@
   &_m {
     display: none;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobileSmall) {
       display: inline-block;
       margin-top: 0;
       width: auto;
@@ -40,7 +40,7 @@
     color: transparent;
     font-size: 23px;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobileSmall) {
       font-size: 33px;
     }
   }
