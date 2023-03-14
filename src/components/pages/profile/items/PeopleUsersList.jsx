@@ -2,7 +2,7 @@ import React from 'react';
 import UserItem from "./UserItem.jsx";
 
 const PeopleChoseSocial = ({users}) => {
-  console.log('PeopleChoseSocial', users)
+
   return (
     <div className='mt-8'>
       <div className='text-left h6 mb-3'>

@@ -59,13 +59,32 @@ textarea {
   }
 }
 
+.input-border-wrapper {
+  position: relative;
+  border-radius: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    background-image: var(--alt-primary-border);
+    border-radius: inherit;
+
+  }
+}
+
 .input {
   width: 100%;
   display: block;
   border-radius: 20px;
   font-weight: 500;
-  border: 1px solid var(--input-border);
+  //border: 1px solid var(--input-border);
   transition: all 0.3s ease-in-out;
+  position: relative;
 
   @include adaptiveValue('font-size', 17, 12);
   @include adaptiveValue('line-height', 21, 14);
@@ -73,6 +92,8 @@ textarea {
   @media (max-width: $mobileSmall) {
     font-weight: 400;
   }
+
+
 
   &_simple-text {
     padding: 14px 24px;

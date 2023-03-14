@@ -7,7 +7,6 @@ import BaseLayout from "./components/layouts/baseLayout/BaseLayout.jsx";
 import Dashboard from "./components/pages/dashboard/Dashboard.jsx";
 import Modal from "./components/modal/Modal.jsx";
 import Registration from "./components/pages/auth/registration/Registration.jsx";
-import AuthLayout from "./components/layouts/authLayout/AuthLayout.jsx";
 import ForgotPassword from "./components/pages/auth/forgotPassword/ForgotPassword.jsx";
 import ForgotCode from "./components/pages/auth/forgotCode/ForgotCode.jsx";
 import ResetPassword from "./components/pages/auth/resetPassword/ResetPassword.jsx";
@@ -27,32 +26,28 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<BaseLayout/>}>
-          <Route path="/" element={<Dashboard/>}/>
-        </Route>
+        <Route path="/" element={<Dashboard/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/registration" element={<Registration/>}/>
         <Route path="/other-services" element={<OtherServices/>}/>
         <Route path="/support" element={<Support/>}/>
-        <Route path="/sales" element={<AuthLayout bigDesk/>}>
+        <Route element={<BaseLayout bigDesk/>}>
           <Route path="/sales/pay" element={<Pay/>}/>
         </Route>
-        <Route path="/sales" element={<AuthLayout/>}>
-          <Route path="/sales" element={<Subscription/>}/>
-          <Route path="/sales/v2" element={<SubscriptionV2/>}/>
-          <Route path="/sales/mobile-pay" element={<MobilePay/>}/>
-        </Route>
-        <Route path="/auth" element={<AuthLayout/>}>
+        <Route element={<BaseLayout/>}>
           <Route path="/auth/forgot-code" element={<ForgotCode/>}/>
           <Route path="/auth/forgot-password" element={<ForgotPassword/>}/>
           <Route path="/auth/reset-password" element={<ResetPassword/>}/>
           <Route path="/auth/test" element={<Test/>}/>
-          <Route path="/auth/chose-role" element={<ChoseRole/>}/>
-          <Route path="/auth/add-creators" element={<AddCreators/>}/>
-          <Route path="/auth/add-interest" element={<Interest/>}/>
-          <Route path="/auth/add-contacts" element={<AddContacts/>}/>
-          <Route path="/auth/add-friends" element={<AddFriends/>}/>
-          <Route path="/auth/add-people" element={<AddPeople/>}/>
+          <Route path="/profile/chose-role" element={<ChoseRole/>}/>
+          <Route path="/profile/add-creators" element={<AddCreators/>}/>
+          <Route path="/profile/add-interest" element={<Interest/>}/>
+          <Route path="/profile/add-contacts" element={<AddContacts/>}/>
+          <Route path="/profile/add-friends" element={<AddFriends/>}/>
+          <Route path="/profile/add-people" element={<AddPeople/>}/>
+          <Route path="/sales" element={<Subscription/>}/>
+          <Route path="/sales/v2" element={<SubscriptionV2/>}/>
+          <Route path="/sales/mobile-pay" element={<MobilePay/>}/>
         </Route>
       </Routes>
       <Modal/>
