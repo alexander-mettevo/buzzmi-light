@@ -24,7 +24,7 @@
 
     li {
       @include adaptiveValue('margin-bottom', 20, 15);
-      color: var(--main-secondary-text)
+      color: var(--text-secondary)
     }
   }
 }

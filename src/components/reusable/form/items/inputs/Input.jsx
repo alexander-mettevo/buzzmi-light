@@ -21,7 +21,6 @@ const Input = (args) => {
         <div>
           {label}
         </div>
-        <div className='input-border-wrapper'>
           <input
             type="text"
             className={`input input_simple-text ${inactive ? '_inactive' : ''} ${errors ? '_form-error' : ''} ${success ? '_form-success' : ''}`}
@@ -29,8 +28,6 @@ const Input = (args) => {
             {...register(name, objectValidation)}
             {...props}
           />
-        </div>
-
       </label>
       <div>
         {errors && <div className={'text-error text-center'}>{errors.message}</div>}

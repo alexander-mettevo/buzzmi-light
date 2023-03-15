@@ -1,13 +1,23 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import Select from "react-select";
 import {phoneNumbersCode} from "./mocData.jsx";
 import {DropdownIndicator} from "./CustomSelect.jsx";
 
 const PhoneSelect = () => {
   const [selected, setSelected] = useState(null);
+  const [focused, setFocused] = useState(false);
+
+  const handleFocus = () => {
+    setFocused(true);
+  }
+
+  const handleBlur = () => {
+    setFocused(false);
+  }
+
 
   return (
-    <div className='phone-select'>
+    <div  className={`phone-select ${focused ? 'phone-select_active' : ''}`} onClick={handleFocus} onBlur={handleBlur}>
       <Select
         components={{DropdownIndicator}}
         options={phoneNumbersCode}

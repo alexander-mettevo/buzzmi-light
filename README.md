@@ -14,4 +14,5 @@
 - [x] [Add interest](https://buzzmi-light.vercel.app/profile/add-interest)
 - [x] [Add creators](https://buzzmi-light.vercel.app/profile/add-creators)
 - [x] [Forgot Your Password - set password](https://buzzmi-light.vercel.app/auth/reset-password)
+- [x] [Provide phone](https://buzzmi-light.vercel.app/auth/provide-phone)
 - [x] Report a problem - modal window

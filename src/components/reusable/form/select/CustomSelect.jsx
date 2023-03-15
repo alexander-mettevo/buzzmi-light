@@ -3,11 +3,12 @@ import Select from 'react-select';
 
 export const DropdownIndicator = () => {
   return (
-  <i className="fa-solid fa-chevron-down select__arrow"/>
+    <i className="fa-solid fa-chevron-down select__arrow text-secondary"/>
   );
 };
 
 const CustomSelect = ({className, options, selected, setSelected}) => {
+
 
   return (
     <Select

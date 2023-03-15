@@ -8,8 +8,8 @@ import {creators} from "../items/mocData.js";
 const AddCreators = () => {
   return (
     <div className='profile__wrapper'>
-      <div className='row align-items-center mb-md-6 mb-2 gx-0'>
-        <div className='col-3'>
+      <div className='row align-items-center mb-md-6 mb-2 gx-0 mt-sm-7'>
+        <div className='col-4 col-sm-3'>
           <img src="/images/assets/rocket.png" alt="rocket" className='img-fluid'/>
         </div>
         <div className='col text-left'>

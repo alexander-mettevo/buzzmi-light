@@ -29,19 +29,12 @@
   &_primary {
     background: var(--btn-primary-bg);
     color: var(--main-opposite-text);
-    box-shadow: var(--btn-primary-box-shadow);
+    transition: all 0.3s ease-in-out;
+    border: 3px solid var(--btn-primary-bg);
 
     &:hover {
-      box-shadow: var(--btn-primary-box-shadow-hover);
-
-      span {
-        text-shadow: 0 0 4px var(--main-opposite-text);
-      }
-    }
-
-    &:active {
-      box-shadow: var(--btn-primary-box-shadow-pressed);
-      background: var(--btn-primary-bg-pressed);
+      background: var(--main-bg);
+      color: var(--btn-primary-bg);
     }
   }
 
@@ -73,7 +66,9 @@
     position: relative;
     background: inherit;
     transition: all 0.3s ease-in-out;
-
+    border: 3px solid var(--btn-primary-bg);
+    color: var(--btn-primary-bg);
+    border-radius: 30px;
 
     &_invite {
       min-height: 20px;
@@ -87,36 +82,10 @@
       }
     }
 
-    &:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 30px;
-      padding: 3px 4px;
-      background: var(--primary);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-    }
-
-    border-radius: 30px;
-
-    span {
-      display: inline-block;
-      background-image: var(--primary);
-      background-clip: text;
-      color: transparent;
-      //transition: all 0.3s ease-in-out;
-    }
-
-
     &:hover, &:active {
-      background-image: var(--btn-primary-bg);
-      box-shadow: var(--btn-primary-box-shadow-hover);
+      background-color: var(--btn-primary-bg);
+      color: var(--main-opposite-text);
 
-      span {
-        color: var(--main-opposite-text);
-      }
     }
   }
 

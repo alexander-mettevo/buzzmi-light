@@ -18,7 +18,7 @@ const SearchInput = () => {
   return (
     <Form onSubmit={handleSubmit(onSubmit)} formClassName='search-form'>
       <Input placeholder="Search" name="search" register={register}/>
-      <button type='submit' className='search-form__btn'><i className="fa-solid fa-magnifying-glass text-primary"/></button>
+      <button type='submit' className='search-form__btn'><i className="fa-solid fa-magnifying-glass input__icon"/></button>
     </Form>
   );
 };
