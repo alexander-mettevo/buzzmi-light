@@ -42,7 +42,7 @@ const Subscription = () => {
           <SubscriptionCard
             title='Elite Creator'
             discount={20}
-            icon={'/public/images/sale/star.png'}
+            icon={'/images/sale/star.png'}
             text={"You can start to expand your business using our advanced technology, user-friendly platform, and dedicated customer support team."}
             content={<HardCode/>}
           />
