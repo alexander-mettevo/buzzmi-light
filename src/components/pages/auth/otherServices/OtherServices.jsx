@@ -6,7 +6,7 @@ import BackBtn from "../../../reusable/btns/backBtn/BackBtn.jsx";
 const OtherServices = () => {
   return (
     <DoubleLayout reverse imageUrl={'./images/registration/intro.png'}>
-      <div className='form-wrapper other-services'>
+      <div className='form-wrapper other-services w-100'>
         <div className='h4 text-center other-services__title'>
           Choose your Social Network
         </div>
