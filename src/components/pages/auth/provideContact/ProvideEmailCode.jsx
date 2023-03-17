@@ -66,6 +66,7 @@ const ProvideEmailCode = () => {
                   register={register}
                   label={'Input Label'}
                   setValue={setValue}
+                  regex={/^[0-9]*$/}
                 />
               ))}
             </div>
