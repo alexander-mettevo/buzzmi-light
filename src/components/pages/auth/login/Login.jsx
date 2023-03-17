@@ -10,10 +10,7 @@ import SecondaryButton from "../../../reusable/form/items/buttons/SecondaryButto
 const Login = () => {
   return (
     <DoubleLayout imageUrl={'./images/login/intro.png'}>
-      <div>
-        <Logo subtitle='Welcome to'/>
-      </div>
-      <div className='form-wrapper'>
+      <div className='form-wrapper w-100'>
         <div className="form form_bg">
           <LoginForms/>
           <div className='login__assets'>or</div>

@@ -1,11 +1,13 @@
 .logo {
   display: flex;
-  gap: 24px;
+  gap: 17px;
   justify-content: center;
+  align-items: center;
+  @include adaptiveValue('margin-bottom', 64, 10);
 
   svg {
-    @include adaptiveValue('width', 90, 55);
-    @include adaptiveValue('height', 100, 62);
+    @include adaptiveValue('width', 68, 45);
+    @include adaptiveValue('height', 76, 49);
 
       path:nth-child(1) {
         fill: var(--main-one-paint);
@@ -31,6 +33,7 @@
       font-family: 'Outer-Sans', sans-serif;
       font-weight: 600;
       color: transparent;
+
 
       @include adaptiveValue('letter-spacing', 6, 3);
       @include adaptiveValue('font-size', 45, 33);

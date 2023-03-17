@@ -9,6 +9,7 @@
   --error-color: #F02461;
   --success-color: #25AF4C;
   --secondary-color: #ff00ff;
+  --warning-color: #FF9800;
 
   --items-box-shadow: rgba(0, 0, 0, 0.25);
   --alt-primary-border: linear-gradient(to right, #FF41B3, #7E00E0);
@@ -26,6 +27,8 @@
   --alter-text: #000072;
 
   // variables for forms
+  --form-bg: #F4F1F8;
+  --form-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   --input-focus-shadow:-4px 0px 8px rgba(247, 32, 131, 0.4), 4px 0px 8px rgba(139, 12, 219, 0.4);
   --input-error-shadow:-4px 0px 8px #F02461, 4px 0px 8px #F02461;
   --input-success-shadow:-4px 0px 8px #25AF4C, 4px 0px 8px #25AF4C;

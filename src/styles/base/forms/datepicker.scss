@@ -12,6 +12,16 @@
     font-weight: 300;
     color: var(--text-secondary);
   }
+
+  .react-date-picker--open {
+    border: 1px solid var(--input-border);
+  }
+
+  ._form-error {
+    border: 1px solid var(--error-color);
+  }
+
+
 }
 
 .date-picker {
@@ -20,9 +30,11 @@
   font-weight: 500;
   font-size: 17px;
   line-height: 21px;
-  border: 1px solid var(--input-border);
+  border: 1px solid var(--text-secondary);
   transition: all 0.3s ease-in-out;
   background: var(--main-bg);
+
+
 
   .react-date-picker__wrapper {
     border: none;

@@ -12,6 +12,7 @@ const Input = (args) => {
     objectValidation,
     validList,
     placeholder,
+    className,
     ...props
   } = args;
 //todo write validation
@@ -23,7 +24,7 @@ const Input = (args) => {
         </div>
           <input
             type="text"
-            className={`input input_simple-text ${inactive ? '_inactive' : ''} ${errors ? '_form-error' : ''} ${success ? '_form-success' : ''}`}
+            className={`input input_simple-text ${inactive ? '_inactive' : ''} ${errors ? '_form-error' : ''} ${success ? '_form-success' : ''} ${className}`}
             placeholder={placeholder}
             {...register(name, objectValidation)}
             {...props}

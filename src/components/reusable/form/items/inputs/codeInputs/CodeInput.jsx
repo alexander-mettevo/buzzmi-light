@@ -1,13 +1,13 @@
 import React, {useRef} from "react";
 
-const CodeInput = ({inactive, success, setCode, index, setValue}) => {
+const CodeInput = ({inactive, success, setCode, index, setValue, error, regex}) => {
   const inputRef = useRef();
 
   const handleInput = (e) => {
     const value = e.target.value;
 
 
-    if (/^\d{0,1}$/.test(value)) {
+    if (regex.test(value)) {
       inputRef.current.value = value;
       setCode((prev) => {
         const newCode = [...prev];
@@ -36,7 +36,7 @@ const CodeInput = ({inactive, success, setCode, index, setValue}) => {
   return (
       <input
         type="text"
-        className={`input input_code ${inactive ? '_inactive' : ''} ${success ? '_form-success' : ''}`}
+        className={`input input_code ${inactive ? '_inactive' : ''} ${success ? '_form-success' : ''} ${error ? '_form-error' : ''}`}
         maxLength={1}
         ref={inputRef}
         onInput={handleInput}

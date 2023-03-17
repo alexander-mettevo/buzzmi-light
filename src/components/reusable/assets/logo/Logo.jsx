@@ -8,7 +8,7 @@ const Logo = ({subtitle}) => {
         <LogoSVG/>
       </div>
       <div className='logo__text'>
-        {subtitle && <div className={'h4'}>{subtitle}</div>}
+        {/*{subtitle && <div className={'h4'}>{subtitle}</div>}*/}
         <div className={'h2'}>BUZZMI</div>
       </div>
     </Link>

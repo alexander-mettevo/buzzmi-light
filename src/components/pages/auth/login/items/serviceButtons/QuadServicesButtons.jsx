@@ -37,7 +37,7 @@ const QuadServicesButtons = () => {
       <RegularButton icon={<AppleSvg/>} className='_fw' onClick={handleAppleClick}>Continue with Apple</RegularButton>
       {
         width > 992 ? (
-          <Link to={'/other-services '}>
+          <Link to={'/other-services '} className={'d-flex w-100 justify-content-center'}>
             <RegularButton className='_fw'>Choose another Social Network</RegularButton>
           </Link>
         ) : (

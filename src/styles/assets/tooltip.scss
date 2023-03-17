@@ -1,6 +1,22 @@
 .tooltip-trigger {
   position: relative;
   display: inline;
+
+
+}
+
+.tooltip-wrapper {
+  position: absolute;
+
+  &_right {
+    right: 3px;
+  }
+  
+  @media (max-width: $tablet) {
+    right: 0;
+  }
+
+
 }
 
 .tooltip-trigger .tooltip{

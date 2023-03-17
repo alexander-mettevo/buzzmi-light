@@ -106,18 +106,23 @@ textarea {
     border: 1px solid var(--error-color);
     margin-bottom: 5px;
 
-    &:focus {
-      box-shadow: var(--input-error-shadow) !important;
-    }
+    //&:focus {
+    //  box-shadow: var(--input-error-shadow) !important;
+    //}
   }
 
   &._form-success {
     color: var(--success-color);
     border: 1px solid var(--success-color);
 
-    &:focus {
-      box-shadow: var(--input-success-shadow) !important;
-    }
+    //&:focus {
+    //  box-shadow: var(--input-success-shadow) !important;
+    //}
+  }
+
+  &._form-warning {
+    color: var(--warning-color);
+    border: 1px solid var(--warning-color);
   }
 
   &._inactive {

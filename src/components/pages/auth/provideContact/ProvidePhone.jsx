@@ -2,10 +2,11 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
 import PhoneSelect from "../../../reusable/form/select/PhoneSelect.jsx";
+import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 
 const ProvidePhone = () => {
   return (
-    <div>
+    <MobileLayout>
       <div className='mb-4'>
         <div className='h4'>
           Provide your contact information
@@ -25,11 +26,13 @@ const ProvidePhone = () => {
         </div>
       </div>
 
-        <PrimaryButton type='submit' className='mb-7'>Next</PrimaryButton>
-      <div className='text-s text-secondary'>
-        By continuing, you agree to Buzzmi’s Terms of Service and confirm that you have read Buzzmi’s Privacy Policy.
+      <div>
+        <PrimaryButton type='submit' className='mb-7'  form='phone-code'>Next</PrimaryButton>
+        <div className='text-s text-secondary'>
+          By continuing, you agree to Buzzmi’s Terms of Service and confirm that you have read Buzzmi’s Privacy Policy.
+        </div>
       </div>
-    </div>
+    </MobileLayout>
   );
 };
 

@@ -1,0 +1,11 @@
+.mobile-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 90px);
+  justify-content: space-between;
+
+  @media (min-width: $mobileSmall) {
+    margin-top: 50px;
+    min-height: calc(100vh - 200px);
+  }
+}

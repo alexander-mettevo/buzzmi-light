@@ -26,6 +26,9 @@ import ProvidePhone from "./components/pages/auth/provideContact/ProvidePhone.js
 import ProvidePhoneCode from "./components/pages/auth/provideContact/ProvidePhoneCode.jsx";
 import ProvideEmailCode from "./components/pages/auth/provideContact/ProvideEmailCode.jsx";
 import ProvideEmail from "./components/pages/auth/provideContact/ProvideEmail.jsx";
+import BioPage from "./components/pages/auth/bioPage/BioPage.jsx";
+import CreatePassword from "./components/pages/auth/createPassword/CreatePassword.jsx";
+import FinishRegistration from "./components/pages/auth/finishRegistration/FinishRegistration.jsx";
 
 const App = () => {
   return (
@@ -38,6 +41,7 @@ const App = () => {
         <Route path="/registration" element={<Registration/>}/>
         <Route path="/other-services" element={<OtherServices/>}/>
         <Route path="/support" element={<Support/>}/>
+        <Route path="/auth/finish" element={<FinishRegistration/>}/>
         <Route element={<BaseLayout bigDesk/>}>
           <Route path="/sales/pay" element={<Pay/>}/>
         </Route>
@@ -51,6 +55,9 @@ const App = () => {
           <Route path="/auth/provide-email-code" element={<ProvideEmailCode/>}/>
           <Route path="/auth/provide-phone" element={<ProvidePhone/>}/>
           <Route path="/auth/provide-phone-code" element={<ProvidePhoneCode/>}/>
+
+          <Route path="/auth/bio" element={<BioPage/>}/>
+          <Route path="/auth/create-password" element={<CreatePassword/>}/>
 
           <Route path="/profile/chose-role" element={<ChoseRole/>}/>
           <Route path="/profile/add-creators" element={<AddCreators/>}/>

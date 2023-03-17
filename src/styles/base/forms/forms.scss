@@ -2,58 +2,81 @@
 // Сніппет (HTML):
 
 .form-wrapper {
-	padding: 60px 40px;
-	display: inline-block;
-	border-radius: 20px;
+  display: inline-block;
+  border-radius: 20px;
 
-	@media (max-width: $mobileSmall) {
-		width: 100%;
-		padding: 0;
-	}
+  @include adaptiveValue('padding-top', 60, 0);
+  @include adaptiveValue('padding-bottom', 60, 0);
+  @include adaptiveValue('padding-right', 40, 0);
+  @include adaptiveValue('padding-left', 40, 0);
+
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet) {
+    background-color: var(--form-bg);
+    box-shadow: var(--form-shadow);
+    border-radius: 20px;
+  }
 }
 
 .form {
-	width: max(100%, 288px);
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
 
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-		margin-bottom: 8px;
-	}
+  &_bg {
+
+}
+
+&__row {
+}
+
+&__column {
+}
+
+&__line {
+}
+
+&__input {
+}
+
+&__button {
+}
+
+&__error {
+  margin-bottom: 8px;
+}
+
 }
 
 .search-form {
-	position: relative;
+  position: relative;
 
 
-	&__btn {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		right: 19px;
-		transform: translateY(-50%);
-		font-size: 24px;
-	}
+  &__btn {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    transform: translateY(-50%);
+    font-size: 24px;
+  }
 
 
 }
+
 //</FORM>
 
 // <BUTTONS>
 // Сніппет (HTML): btn
- @import "button";
+@import "button";
 
 // <INPUTS>
 // Сніппет (HTML): inp
- @import "input";
+@import "input";
 
 // <CHECK>
 // Сніппет (HTML): chk
@@ -65,7 +88,7 @@
 
 // <SELECT>
 // Сніппет (HTML): sel
- @import "select";
+@import "select";
 
 // <RATING>
 // Сніппет (HTML): rating
@@ -81,4 +104,4 @@
 
 // <CALENDAR>
 // Сніппет (HTML):
- @import "datepicker";
+@import "datepicker";

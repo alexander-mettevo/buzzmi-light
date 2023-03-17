@@ -50,6 +50,7 @@ const CodeInputs = ({label, formClassName, identifier}) => {
             type="text"/>
           {[...Array(6)].map((_, i) => (
             <CodeInput
+              regex={/^\d{0,1}$/}
               setCode={setCode}
               key={i}
               index={i}

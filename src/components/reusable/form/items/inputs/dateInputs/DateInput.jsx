@@ -3,8 +3,14 @@ import DatePicker from 'react-date-picker';
 import Arrow from "../../../../assets/arrow/Arrow.jsx";
 import CalendarSvg from "./CalendarSVG.jsx";
 
-const DateInput = ({label}) => {
+const DateInput = ({label, setValue, errors}) => {
   const [value, onChange] = useState(null)
+
+  const handleDateChange = (date) => {
+    console.log('DateInput', date, setValue)
+    onChange(date)
+    setValue('birthday', date)
+  }
 
   return (
     <div className={'input-label'}>
@@ -13,8 +19,8 @@ const DateInput = ({label}) => {
       </div>
       <div className={'date-wrapper'}>
         <DatePicker
-          className={`date-picker ${!value ? 'line-wrapper' : ''}`}
-          onChange={onChange}
+          className={`date-picker ${!value ? 'line-wrapper' : ''} ${errors ? '_form-error' : ''}`}
+          onChange={handleDateChange}
           value={value}
           calendarIcon={<Arrow/>}
           clearIcon={null}
@@ -24,6 +30,9 @@ const DateInput = ({label}) => {
           format={'dd/MM/yyyy'}
         />
         <CalendarSvg/>
+      </div>
+      <div>
+        {errors && <div className={'text-error text-center text-r'}>{errors.message}</div>}
       </div>
       <div className={'date-wrapper__subtitle text-r'}>
         Your birthday won’t be shown publicly

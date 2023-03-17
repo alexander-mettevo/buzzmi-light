@@ -11,9 +11,6 @@ const ForgotCode = () => {
 
   return (
     <>
-      <div className='forgot-password__logo'>
-        <Logo subtitle='Welcome to'/>
-      </div>
       <div className='h3 content-auth__title'>Enter OTP</div>
       <div className='content-auth__text text-r'>
         We want to make sure it’r really you. In order to further verify your identity, enter the verification code that was sent to  {identifier}

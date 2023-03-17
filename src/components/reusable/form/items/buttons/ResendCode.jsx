@@ -33,7 +33,7 @@ const ResendCode = ({handleResendCode}) => {
 
   return (
     <button
-      className='text-r text-primary content-auth__resend-code'
+      className='h6 text-primary content-auth__resend-code'
       onClick={handleClick}
       disabled={time !== 0}
     >

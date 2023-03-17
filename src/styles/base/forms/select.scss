@@ -90,6 +90,11 @@
     border: 1px solid var(--input-border) !important;
   }
 
+  &_error {
+    border: 1px solid var(--error-color) !important;
+    box-shadow: var(--input-error-shadow);
+  }
+
   & > * {
     font-weight: 500;
   }
