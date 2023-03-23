@@ -1,40 +1,48 @@
 import React from 'react';
 import Form from "../../../reusable/form/Form.jsx";
-import Input from "../../../reusable/form/items/inputs/Input.jsx";
-import {useForm} from "react-hook-form";
-import {yupResolver} from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import NewInput from "../../../reusable/form/items/inputs/NewInput.jsx";
+import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
+import {useFormValidator} from "../../../../../form-validator/hooks/index.js";
 
-const passwordSchema = yup.object().shape({
-  password: yup.string().required('Password is required'),
-  confirmPassword: yup.string().required('Confirm password is required').oneOf([yup.ref('password'), null], 'Passwords must match')
-})
+
+const validationSchema = new ValidationSchema(
+  {
+    password: [
+      {rule: 'required'},
+      {rule: 'password', value: 3},
+      {rule: 'leastOneUpperCase'},
+      {rule: 'leastOneSpecialCharacter', value: 3},
+    ],
+    confirmPassword: [
+      {rule: 'passwordConfirmation', value: 'password'},
+    ],
+  }
+);
 
 const CreatePasswordForm = () => {
-  const {register, handleSubmit, formState: {errors}} = useForm({
-    resolver: yupResolver(passwordSchema)
+  const {register, handleSubmit, getFieldMessages} = useFormValidator(validationSchema, (formData) => {
+    // Handle form submission, e.g., send data to an API.
+    console.log('Form submitted:', formData);
+  }, {
+    showErrorsOnSubmit: false
   });
 
-  const onSubmit = async (data) => {
-    console.log('CreatePasswordForm', data)
-  }
-
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} id='create-password'>
-      <Input
-        label='Create your password'
+    <Form onSubmit={handleSubmit} id='create-password'>
+      <NewInput
+        label='Create your Password'
+        multiValidation={getFieldMessages('password')}
+        name='password'
+        type='password'
         register={register}
-        name={'password'}
-        errors={errors.password}
-        validList
-        className='_form-warning'
       />
-      <Input
+
+      <NewInput
         label='Confirm password'
+        multiValidation={getFieldMessages('confirmPassword')}
+        name='confirmPassword'
+        type='password'
         register={register}
-        name={'confirmPassword'}
-        errors={errors.confirmPassword}
-        validList
       />
     </Form>
   );

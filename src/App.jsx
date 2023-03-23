@@ -49,7 +49,7 @@ const App = () => {
           <Route path="/auth/forgot-code" element={<ForgotCode/>}/>
           <Route path="/auth/forgot-password" element={<ForgotPassword/>}/>
           <Route path="/auth/reset-password" element={<ResetPassword/>}/>
-          <Route path="/auth/test" element={<Test/>}/>
+          <Route path="/test" element={<Test/>}/>
 
           <Route path="/auth/provide-email" element={<ProvideEmail/>}/>
           <Route path="/auth/provide-email-code" element={<ProvideEmailCode/>}/>
