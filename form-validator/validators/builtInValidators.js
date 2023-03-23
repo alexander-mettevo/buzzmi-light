@@ -150,6 +150,10 @@ export const age18Plus = () => (value) => {
   return ageInYears >= 18;
 }
 
-/**
- *
- */
+export const dateOfBirth = () => (value) => {
+  const birthDate = new Date(value);
+  const currentDate = new Date();
+  const ageDifference = currentDate - birthDate;
+  const ageInYears = ageDifference / (1000 * 60 * 60 * 24 * 365.25);
+  return ageInYears >= 18 && birthDate.getFullYear() > 1899 && birthDate < currentDate;
+}

@@ -86,7 +86,7 @@ const ProvidePhoneCode = () => {
             isValid={valid === 'valid'}
             successTitle='Success!'
             successMessage='Your phone has been verified'
-            wrongTitle='Wrong verification number'
+            wrongTitle='Wrong verification code'
             wrongMessage='Re-enter the code'
           />
         </form>

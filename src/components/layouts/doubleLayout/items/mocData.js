@@ -20,7 +20,7 @@ export const layoutData = [
   },
   {
     title: 'Fair pay for fair work.',
-    description: 'WBuzzmi creators earn 90% of every subscription, with no fees. We keep just 10% to keep things buzzing.',
+    description: 'Buzzmi creators earn 90% of every subscription, with no fees. We keep just 10% to keep things buzzing.',
     image: '/images/assets/intro/5.png',
   },
 ]

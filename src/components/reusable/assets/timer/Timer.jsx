@@ -14,6 +14,9 @@ const Timer = ({ eventDate }) => {
   }, []);
 
   const formatTime = (time) => {
+
+    if (time < 0) return "00:00:00:00";
+
     const days = Math.floor(time / (24 * 60 * 60 * 1000));
     const hours = Math.floor((time / (60 * 60 * 1000)) % 24);
     const minutes = Math.floor((time / (60 * 1000)) % 60);

@@ -45,7 +45,7 @@
 .text-b {
   font-weight: 500;
 
-  @include adaptiveValue('font-size', 17, 15);
+  @include adaptiveValue('font-size', 18, 15);
   @include adaptiveValue('line-height', 21, 20);
 }
 

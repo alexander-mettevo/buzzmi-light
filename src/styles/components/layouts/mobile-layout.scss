@@ -4,8 +4,15 @@
   min-height: calc(100vh - 90px);
   justify-content: space-between;
 
+  @media (min-width: $tablet) {
+    display: block;
+    height: auto;
+    min-height: inherit !important;
+    max-height: inherit;
+  }
+
   @media (min-width: $mobileSmall) {
     margin-top: 50px;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 220px);
   }
 }

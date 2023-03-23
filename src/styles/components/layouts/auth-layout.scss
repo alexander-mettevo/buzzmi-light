@@ -22,6 +22,8 @@
       align-items: center;
     }
 
+
+
     @media (max-width: $mobileSmall) {
       display: none;
     }
@@ -54,6 +56,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    //@media (min-width: $tablet) {
+    //  justify-content: flex-start;
+    //  flex: 0;
+    //}
 
     @media (max-width: $mobileSmall) {
       height: calc(100vh - 65px);
@@ -107,6 +114,8 @@
   &__resend-code {
     margin-top: 40px;
     margin-bottom: 40px;
+    font-size: 15px !important;
+    line-height: 18.29px !important;
 
     @media (max-width: $mobileSmall) {
       margin-top: 5px;

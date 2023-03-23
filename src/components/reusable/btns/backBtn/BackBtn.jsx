@@ -7,7 +7,7 @@ const BackBtn = () => {
    <div className='back-btn back-btn_d' >
      <button className="back-btn__content" onClick={() => navigate(-1)}>
        <i className="back-btn__icon fa-solid fa-arrow-right"></i>
-       <span className='text-primary'>To Back</span>
+       <span className='text-primary'>Back</span>
      </button>
    </div>
   );

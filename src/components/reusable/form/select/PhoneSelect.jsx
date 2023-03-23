@@ -50,7 +50,7 @@ const PhoneSelect = () => {
   return (
     <Form id="phone-code" onSubmit={handleSubmit}>
       <div
-        className={`phone-select ${focused ? 'phone-select_active' : ''} ${errors.countryCode || errors.phone ? 'phone-select_error' : ''}`}
+        className={`phone-select ${focused ? 'phone-select_active' : ''} ${(!selected && errors.countryCode) || errors.phone ? 'phone-select_error' : ''}`}
         onClick={handleFocus} onBlur={handleBlur}>
         <Select
           components={{DropdownIndicator}}
@@ -71,8 +71,16 @@ const PhoneSelect = () => {
         />
       </div>
       <div className='mt-2'>
-        {errors.countryCode && <div className={'text-error text-center'}>{errors.countryCode}</div>}
-        {errors.phone && <div className={'text-error text-center'}>{errors.phone}</div>}
+        {!selected && errors.countryCode && <div className={'text-error text-center'}>{errors.countryCode.map((item, index) => (
+          <div key={index + 'countryCode'}>
+            Country code: {item}
+          </div>
+        ))}</div>}
+        {errors.phone && <div className={'text-error text-center'}>{errors.phone.map((item, index) => (
+          <div key={index + 'phone'}>
+            Phone: {item}
+          </div>
+        ))}</div>}
       </div>
     </Form>
   );

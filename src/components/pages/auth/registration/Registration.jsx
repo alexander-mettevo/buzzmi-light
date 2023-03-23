@@ -14,7 +14,7 @@ const Registration = () => {
         <QuadServicesButtons/>
         <div className='login__assets'>or</div>
         <Link to={'/auth/provide-phone'} className='registration__btn'>
-          <PrimaryButton type='submit'>Signup with Phone or Email</PrimaryButton>
+          <PrimaryButton type='submit'>Sign Up with Phone or Email</PrimaryButton>
         </Link>
         <Policy/>
         <div className='text-center text-r registration__footer'>

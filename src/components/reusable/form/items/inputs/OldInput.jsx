@@ -36,7 +36,7 @@ const OldInput = (args) => {
       {validList && (
         <ul className='validation-list text-s'>
           <li className='validation-list__item validation-list__item_success '> from 8 to 20 characters</li>
-          <li className='validation-list__item validation-list__item_error'> contain at least one upper case latter</li>
+          <li className='validation-list__item validation-list__item_error'> contain at least one upper case letter</li>
           <li className='validation-list__item validation-list__item_error'> contain at least one special character</li>
         </ul>
       )}

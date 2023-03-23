@@ -35,7 +35,7 @@ const CreatePassword = () => {
         </div>
         <div className='mb-6 text-r text-secondary'>
           <span className='fw-bold'>Make it long</span> from 8 to 20 characters. <span className='fw-bold'>Make it diverse.</span> It should contain at
-          least one upper case latter and at least one special character
+          least one upper case letter and at least one special character
         </div>
         <PrimaryButton className={`mb-7`} type="submit" form="create-password">Next</PrimaryButton>
       </div>

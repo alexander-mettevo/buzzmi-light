@@ -4,10 +4,12 @@ import Button from "./Button.jsx";
 const RegularButton = ({children, className, icon, ...props}) => {
   return (
     <Button className={'button_regular ' + className} {...props}>
-      {!!icon && icon}
-      <span className={'text-r'}>
+      <div className={'d-flex align-items-center'}>
+        {!!icon && icon}
+        <span className={'text-r'}>
         {children}
       </span>
+      </div>
     </Button>
   );
 };

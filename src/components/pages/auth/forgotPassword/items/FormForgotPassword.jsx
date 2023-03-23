@@ -32,7 +32,7 @@ const FormForgotPassword = () => {
   return (
     <Form error={error} onSubmit={handleSubmit} formClassName='form content-auth__form'>
       <Input label='Your Phone or Email' name='identifier' register={register}/>
-      <PrimaryButton type='submit'>Continue</PrimaryButton>
+      <PrimaryButton  type='submit'>Continue</PrimaryButton>
     </Form>
   );
 };

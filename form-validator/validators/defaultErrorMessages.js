@@ -1,3 +1,5 @@
+import {dateOfBirth} from "./builtInValidators.js";
+
 export const defaultErrorMessages = {
   required: 'field is required',
   minLength: (min) => `Must be at least ${min} characters long`,
@@ -15,4 +17,5 @@ export const defaultErrorMessages = {
   countryPhoneCode: 'Invalid country phone code',
   phone: 'Invalid phone',
   age18Plus: 'Sorry, looks like you\'re not eligible for Buzzmi... But thanks for checking us out!',
+  dateOfBirth: 'Invalid date of birth',
 };

@@ -18,7 +18,7 @@ const ProvidePhone = () => {
           Your phone number
         </div>
         <PhoneSelect/>
-        <Link to='/auth/provide-email' className='h6 text-alt-primary mt-5 d-inline-block mb-6'>
+        <Link to='/auth/provide-email' className='h6 text-alt-primary  text-b mt-5 d-inline-block mb-6'>
           or sign up with email
         </Link>
         <div className='text-r text-secondary'>

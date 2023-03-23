@@ -85,7 +85,7 @@ const ProvideEmailCode = () => {
             isValid={valid === 'valid'}
             successTitle='Success!'
             successMessage='Your email address has been verified'
-            wrongTitle='Wrong verification email'
+            wrongTitle='Wrong verification code'
             wrongMessage='Re-enter the code'
           />
         </form>

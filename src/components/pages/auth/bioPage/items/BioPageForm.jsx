@@ -19,7 +19,7 @@ const validationSchema = new ValidationSchema(
     invitation: [],
     birthday: [
       {rule: 'required'},
-      {rule: 'age18Plus'},
+      {rule: 'dateOfBirth'},
     ]
   }
 );

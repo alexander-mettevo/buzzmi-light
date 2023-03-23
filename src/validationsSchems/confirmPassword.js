@@ -2,7 +2,7 @@ import * as Yup from "yup";
 
 export const messages = {
   size: 'from 8 to 20 characters',
-  uppercase: 'contain at least one upper case latter',
+  uppercase: 'contain at least one upper case letter',
   special: 'contain at least one special character',
 }
 

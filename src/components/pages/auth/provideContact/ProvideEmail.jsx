@@ -47,7 +47,7 @@ const ProvideEmail = () => {
         <Form id="email-code" onSubmit={handleSubmit}>
           <Input register={register} name='email' label='Your email'/>
         </Form>
-        <Link to='/auth/provide-phone' className='h6 text-alt-primary mt-5 d-inline-block mb-6'>
+        <Link to='/auth/provide-phone' className='h6  text-b text-alt-primary mt-5 d-inline-block mb-6'>
           or sign up with phone
         </Link>
         <div className='text-r text-secondary'>
