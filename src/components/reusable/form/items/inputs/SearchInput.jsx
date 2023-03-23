@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from "../../Form.jsx";
-import Input from "./Input.jsx";
+import OldInput from "./OldInput.jsx";
 import {useForm} from "react-hook-form";
 
 const SearchInput = () => {
@@ -17,7 +17,7 @@ const SearchInput = () => {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)} formClassName='search-form'>
-      <Input placeholder="Search" name="search" register={register}/>
+      <OldInput placeholder="Search" name="search" register={register}/>
       <button type='submit' className='search-form__btn'><i className="fa-solid fa-magnifying-glass input__icon"/></button>
     </Form>
   );

@@ -13,12 +13,10 @@ const validationSchema = new ValidationSchema(
 const Test = () => {
   const { values, errors, isValid, handleChange, handleSubmit } = useFormValidator(validationSchema, (formData) => {
     // Handle form submission, e.g., send data to an API.
-    console.log('Form submitted:', formData);
   }, {
     showErrorsOnSubmit: false,
   });
 
-  console.log('Test', values, errors)
 
 
   return (

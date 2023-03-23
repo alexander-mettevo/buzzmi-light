@@ -1,32 +1,36 @@
 import React, {useState} from "react";
-import {useForm} from "react-hook-form";
 import CodeInput from "./CodeInput";
 import PrimaryButton from "../../buttons/PrimaryButton.jsx";
 import Form from "../../../Form.jsx";
-import {yupResolver} from "@hookform/resolvers/yup/dist/yup.js";
-import {confirmCodeSchema} from "../../../../../../validationsSchems/confirmCode.js";
 import userAPI from "../../../../../../store/services/UserService.js";
 import ResendCode from "../../buttons/ResendCode.jsx";
 import {useNavigate} from "react-router-dom";
+import ValidationSchema from "../../../../../../../form-validator/ValidationSchema.js";
+import {useFormValidator} from "../../../../../../../form-validator/hooks/index.js";
 
+const validationSchema = new ValidationSchema(
+  {
+    code: [
+      {rule: 'required'},
+      {rule: 'countDigits', value: 6},
+    ],
+  }
+);
 const CodeInputs = ({label, formClassName, identifier}) => {
   const navigate = useNavigate();
   const [code, setCode] = useState([]);
   const [sendCode] = userAPI.useForgotPasswordMutation()
   const [confirmCode] = userAPI.useConfirmForgotPasswordMutation()
+  const {register, handleSubmit, setValue, values} = useFormValidator(validationSchema, async (formData) => {
+    //TODO Place for sending data to API use confirmCode()
 
-  const {handleSubmit, register, setValue, getValues} = useForm({
-    resolver: yupResolver(confirmCodeSchema)
-  });
-
-  const onSubmit = async ({code}) => {
-    const res = await confirmCode({identifier, code})
+    const res = {}
     if (res.error) {
       console.error(res.error)
     } else {
       navigate('/auth/reset-password')
     }
-  };
+  });
 
   const handleResendCode = async () => {
     const res = await sendCode({identifier})
@@ -38,7 +42,7 @@ const CodeInputs = ({label, formClassName, identifier}) => {
   }
 
   return (
-    <Form formClassName={formClassName} onSubmit={handleSubmit(onSubmit)}>
+    <Form formClassName={formClassName} onSubmit={handleSubmit}>
       <label className={'input-label'}>
         <div>
           {label}
@@ -63,7 +67,7 @@ const CodeInputs = ({label, formClassName, identifier}) => {
       </label>
       <div>
         <ResendCode handleResendCode={handleResendCode}/>
-        <PrimaryButton className={getValues('code')?.length !== 6 ? 'button_inactive' : ''} type='submit'>Continue</PrimaryButton>
+        <PrimaryButton className={values?.code?.length !== 6 ? 'button_inactive' : ''} type='submit'>Continue</PrimaryButton>
       </div>
     </Form>
   );

@@ -304,7 +304,7 @@ export const socials = [
 ]
 
 
-export const peoples = {
+export const peoplesData = {
   recommendation: [
     {
       name: 'Pritam',

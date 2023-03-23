@@ -1,9 +1,8 @@
 import React from 'react';
 import Form from "../../../reusable/form/Form.jsx";
-import NewInput from "../../../reusable/form/items/inputs/NewInput.jsx";
+import Input from "../../../reusable/form/items/inputs/Input.jsx";
 import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
 import {useFormValidator} from "../../../../../form-validator/hooks/index.js";
-
 
 const validationSchema = new ValidationSchema(
   {
@@ -19,25 +18,22 @@ const validationSchema = new ValidationSchema(
   }
 );
 
-const CreatePasswordForm = () => {
-  const {register, handleSubmit, getFieldMessages} = useFormValidator(validationSchema, (formData) => {
-    // Handle form submission, e.g., send data to an API.
-    console.log('Form submitted:', formData);
-  }, {
+const CreatePasswordForm = ({passwordLabel = 'Create your Password', submitHandler }) => {
+  const {register, handleSubmit, getFieldMessages} = useFormValidator(validationSchema, submitHandler, {
     showErrorsOnSubmit: false
   });
 
   return (
-    <Form onSubmit={handleSubmit} id='create-password'>
-      <NewInput
-        label='Create your Password'
+    <Form formClassName={'w-100'} onSubmit={handleSubmit} id='create-password'>
+      <Input
+        label={passwordLabel}
         multiValidation={getFieldMessages('password')}
         name='password'
         type='password'
         register={register}
       />
 
-      <NewInput
+      <Input
         label='Confirm password'
         multiValidation={getFieldMessages('confirmPassword')}
         name='confirmPassword'

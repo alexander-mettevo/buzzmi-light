@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProfileItemsCollection from "../items/ProfileItemsCollection.jsx";
 import AddCreatorsMobileBtns from "../addCreactors/items/AddCreatorsMobileBtns.jsx";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
 import {interests} from "../items/mocData.js";
+import {useDispatch} from "react-redux";
+import {setRegistrationData} from "../../../../store/slices/userSlice/userSlice.js";
 
 const Interest = () => {
+  const [selectedItems, setSelectedItems] = useState([]);
+  const navigation = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleContinue = () => {
+    dispatch(setRegistrationData({creators: selectedItems}))
+    navigation('/sales')
+  }
+
+
   return (
     <div className='profile__wrapper mt-sm-8'>
       <div className='row align-items-center mb-md-6 mb-2 gx-0'>
@@ -17,12 +29,12 @@ const Interest = () => {
           <div className='text-r'>Tell us what sparks your interest.</div>
         </div>
       </div>
-      <ProfileItemsCollection items={interests}/>
+      <ProfileItemsCollection selectedItems={selectedItems} setSelectedItems={setSelectedItems} items={interests}/>
       <AddCreatorsMobileBtns/>
       <div className='d-none d-sm-block'>
-        <Link to='/auth/invite' className='d-block my-sm-8'>
+        <buttin onClick={handleContinue} className='d-block my-sm-8 w-100'>
           <PrimaryButton>Next</PrimaryButton>
-        </Link>
+        </buttin>
       </div>
     </div>
   );

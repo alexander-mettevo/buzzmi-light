@@ -1,24 +1,52 @@
 import React from 'react';
-import Input from "../../../../reusable/form/items/inputs/Input.jsx";
+import OldInput from "../../../../reusable/form/items/inputs/OldInput.jsx";
 import Form from "../../../../reusable/form/Form.jsx";
 import PrimaryButton from "../../../../reusable/form/items/buttons/PrimaryButton.jsx";
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {useFormValidator} from "../../../../../../form-validator/hooks/index.js";
+import Input from "../../../../reusable/form/items/inputs/Input.jsx";
+import ValidationSchema from "../../../../../../form-validator/ValidationSchema.js";
+
+const validationSchema = new ValidationSchema(
+  {
+    cardholderName: [
+      { rule: 'required' },
+      { rule: 'minLength', value: 3 },
+      { rule: 'maxLength', value: 40 },
+    ],
+    cardNumber: [
+      { rule: 'required' },
+      { rule: 'minLength', value: 16 },
+      { rule: 'maxLength', value: 16 },
+    ],
+    expiration: [
+      { rule: 'required' },
+    ],
+    cvv: [
+      { rule: 'required' },
+      { rule: 'minLength', value: 3 },
+      { rule: 'maxLength', value: 3 },
+    ],
+  }
+);
 
 const PayForm = ({subtotal, discount, tax, total}) => {
-  const {register, handleSubmit, formState: {errors}} = useForm({
-    defaultValues: {
-      cardholderName: '',
-      cardNumber: '',
-      expiration: '',
-      cvv: ''
+const navigate = useNavigate();
+
+  const {register, handleSubmit, errors} = useFormValidator(validationSchema, async (formData) => {
+    //TODO Place for sending data to API
+    const res = {}
+    if (res.error) {
+      console.error(res.error)
+    } else {
+      navigate('/auth/finish')
     }
   });
 
-  const onSubmit = data => console.log(data)
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} formClassName='pay-form'>
+    <Form onSubmit={handleSubmit} formClassName='pay-form'>
       <div>
         <Input name='cardholderName' register={register} label='Cardholder Name'/>
         <Input name='cardNumber' register={register} label='Card Number'/>

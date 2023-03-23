@@ -2,28 +2,37 @@ import React, {useRef} from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import {Link, useNavigate} from "react-router-dom";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
-import Input from "../../../reusable/form/items/inputs/Input.jsx";
+import OldInput from "../../../reusable/form/items/inputs/OldInput.jsx";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Form from "../../../reusable/form/Form.jsx";
+import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
+import {useFormValidator} from "../../../../../form-validator/hooks/index.js";
+import Input from "../../../reusable/form/items/inputs/Input.jsx";
 
-const emailSchema = yup.object({
-  email: yup.string()
-    .email('Wrong email address')
-    .required('Email is required')
-})
+const validationSchema = new ValidationSchema(
+  {
+    email: [
+      {rule: 'required'},
+      {rule: 'email'},
+    ]
+  }
+);
 
 const ProvideEmail = () => {
   const navigate = useNavigate();
-  const {register, handleSubmit, formState: {errors}} = useForm({
-    resolver: yupResolver(emailSchema)
+  const {register, handleSubmit} = useFormValidator(validationSchema, async (formData) => {
+    //TODO Place for sending data to API
+    const res = {}
+    if (res.error) {
+      console.error(res.error)
+    } else {
+      navigate('/auth/provide-email-code')
+      localStorage.setItem('identifier', formData.email)
+    }
   });
 
-  const onSubmit = (data) => {
-    console.log(data)
-    navigate('/auth/provide-email-code')
-  }
 
 
   return (
@@ -35,8 +44,8 @@ const ProvideEmail = () => {
         <div className='mt-9'>
           <img src="/images/assets/mail.png" alt=""/>
         </div>
-        <Form id="email-code" onSubmit={handleSubmit(onSubmit)}>
-          <Input errors={errors.email} register={register} name='email' label='Your email'/>
+        <Form id="email-code" onSubmit={handleSubmit}>
+          <Input register={register} name='email' label='Your email'/>
         </Form>
         <Link to='/auth/provide-phone' className='h6 text-alt-primary mt-5 d-inline-block mb-6'>
           or sign up with phone

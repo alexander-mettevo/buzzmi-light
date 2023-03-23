@@ -2,10 +2,8 @@ import React, {useEffect, useState} from 'react';
 import SearchInput from "../../../reusable/form/items/inputs/SearchInput.jsx";
 import {useForm} from "react-hook-form";
 
-const ProfileItemsCollection = ({items}) => {
-  //handle array checkboxes
-  const [selectedItems, setSelectedItems] = useState([]);
-
+const ProfileItemsCollection = ({items, selectedItems, setSelectedItems}) => {
+  console.log('selectedItems', selectedItems)
   const handleCheckboxChange = (e) => {
     const {name, checked} = e.target;
     if (checked) {

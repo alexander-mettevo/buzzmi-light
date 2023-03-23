@@ -32,7 +32,7 @@ const DateInput = ({label, setValue, errors}) => {
         <CalendarSvg/>
       </div>
       <div>
-        {errors && <div className={'text-error text-center text-r'}>{errors.message}</div>}
+        {errors && <div className={'text-error text-center'}>{errors[0]}</div>}
       </div>
       <div className={'date-wrapper__subtitle text-r'}>
         Your birthday won’t be shown publicly

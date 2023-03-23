@@ -7,6 +7,10 @@ const userSlice = createSlice({
     email: '',
     phone: '',
     identifier: '',
+    registration: {
+      role: '',
+      creators: [],
+    }
   },
 
   reducers: {
@@ -15,9 +19,12 @@ const userSlice = createSlice({
       state.email = action.payload.email;
       state.phone = action.payload.phone;
       state.identifier = action.payload.identifier;
+    },
+    setRegistrationData: (state, action) => {
+      state.registration.role = action.payload.role;
     }
   }
 })
 
 export default userSlice.reducer;
-export const {setUser} = userSlice.actions;
+export const {setUser, setRegistrationData} = userSlice.actions;

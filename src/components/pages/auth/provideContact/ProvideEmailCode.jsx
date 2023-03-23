@@ -1,41 +1,44 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
-import {useForm} from "react-hook-form";
-import {yupResolver} from "@hookform/resolvers/yup";
-import {confirmCodeSchema} from "../../../../validationsSchems/confirmCode.js";
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import CodeInput from "../../../reusable/form/items/inputs/codeInputs/CodeInput.jsx";
 import FinallyMessage from "../../../reusable/form/items/validation/FinallyMessage.jsx";
 import ResendCode from "../../../reusable/form/items/buttons/ResendCode.jsx";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import {useFormValidator} from "../../../../../form-validator/hooks/index.js";
+import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
 
+const validationSchema = new ValidationSchema(
+  {
+    code: [
+      {rule: 'required'},
+    ]
+  }
+);
+
+//TODO add handler error from API
 const ProvideEmailCode = () => {
   const navigate = useNavigate();
   const [code, setCode] = useState([]);
   const [valid, setValid] = useState(null);
 
-  const {handleSubmit, register, setValue, getValues} = useForm({
-    resolver: yupResolver(confirmCodeSchema)
+
+  const {register, handleSubmit, values, setValue} = useFormValidator(validationSchema, async (formData) => {
+    //TODO Place for sending data to API
+    const res = {}
+    if (res.error) {
+      setValid('invalid')
+      console.error(res.error)
+    } else {
+      setValid('valid')
+      navigate('/auth/bio')
+    }
   });
 
-
-  const onSubmit = async ({code}) => {
-    navigate('/auth/bio')
-  };
-
   const handleResendCode = async () => {
-
+    //TODO Place for sending data to API
   }
-  // todo remove on production
-  useEffect(() => {
-    if (getValues('code')?.length === 6) {
-      if (getValues('code') === '123456') {
-        setValid('valid')
-      } else {
-        setValid('invalid')
-      }
-    }
-  }, [code])
+
 
   return (
     <MobileLayout>
@@ -46,7 +49,7 @@ const ProvideEmailCode = () => {
         <div className='mt-9 mb-9 mb-sm-20'>
           <img src="/images/assets/mail.png" alt=""/>
         </div>
-        <form id={'input-phone-code'} onSubmit={handleSubmit(onSubmit)}>
+        <form id={'input-phone-code'} onSubmit={handleSubmit}>
           <label className={'input-label'}>
             <div>
               Verify your email
@@ -74,7 +77,7 @@ const ProvideEmailCode = () => {
           {
             !valid && (
               <div className='text-r text-secondary mt-9'>
-                We sent a 6-digit code to youremail@mail.com. Confirm it belongs to you to keep your account secure.
+                We sent a 6-digit code to {localStorage.getItem('identifier')}. Confirm it belongs to you to keep your account secure.
               </div>
             )}
           <FinallyMessage
@@ -90,7 +93,7 @@ const ProvideEmailCode = () => {
 
       <div>
         <ResendCode handleResendCode={handleResendCode}/>
-        <PrimaryButton className={`mb-7 ${(valid !== 'valid' || getValues('code')?.length !== 6) ? 'button_inactive' : ''}`} type="submit"
+        <PrimaryButton className={`mb-7 ${(values.code?.length !== 6) ? 'button_inactive' : ''}`} type="submit"
                        form="input-phone-code">Next</PrimaryButton>
       </div>
     </MobileLayout>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Role from "./items/Role.jsx";
+import {useNavigate} from "react-router-dom";
 
 const ChoseRole = () => {
   return (
@@ -10,9 +11,9 @@ const ChoseRole = () => {
         <div>Are you a...</div>
       </div>
       <ul className='role-list'>
-        <li><Role img='/images/role/explorer.png' title='Explorer' href='/auth/add-creators'/></li>
-        <li><Role img='/images/role/creator.png' title='Creator' href='/auth/add-creators'/></li>
-        <li><Role img='/images/role/both.png' title='Both' href='/auth/add-creators'/></li>
+        <li><Role img='/images/role/explorer.png' title='Explorer' href='/profile/add-creators'/></li>
+        <li><Role img='/images/role/creator.png' title='Creator' href='/profile/add-creators'/></li>
+        <li><Role img='/images/role/both.png' title='Both' href='/profile/add-creators'/></li>
       </ul>
     </>
   );

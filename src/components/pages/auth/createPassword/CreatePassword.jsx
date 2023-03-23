@@ -2,8 +2,21 @@ import React from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import CreatePasswordForm from "./CreatePasswordForm.jsx";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import {useNavigate} from "react-router-dom";
 
 const CreatePassword = () => {
+  const navigate = useNavigate();
+
+  const submitCallback = async (formData) => {
+    try {
+      //TODO Place for sending data to API
+      const res = {}
+      navigate('/profile/chose-role')
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
   return (
     <MobileLayout>
       <div className='mb-4'>
@@ -13,7 +26,7 @@ const CreatePassword = () => {
         <div className='mb-9'>
           <img src="/images/assets/shield.png" alt="shield"/>
         </div>
-        <CreatePasswordForm/>
+        <CreatePasswordForm submitHandler={submitCallback}/>
       </div>
 
       <div>

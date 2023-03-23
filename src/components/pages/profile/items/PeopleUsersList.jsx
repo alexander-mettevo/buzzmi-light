@@ -9,13 +9,13 @@ const PeopleChoseSocial = ({users}) => {
         New Recommendation
       </div>
       <div>
-        {users.recommendation.map((user, index) => <UserItem user={user}  key={index + 'user'}/>)}
+        {users?.recommendation?.length > 0 && users?.recommendation.map((user, index) => <UserItem user={user}  key={index + 'user'}/>)}
       </div>
       <div className='text-left h6 mb-3'>
         Suggested profiles
       </div>
       <div>
-        {users.suggested.map((user, index) => <UserItem user={user}  key={index + 'user'}/>)}
+        {users?.suggested?.length > 0 && users?.suggested.map((user, index) => <UserItem user={user}  key={index + 'user'}/>)}
       </div>
     </div>
 

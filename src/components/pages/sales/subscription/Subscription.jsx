@@ -60,7 +60,7 @@ const Subscription = () => {
       <Link to='/sales/pay' className='subscription__btn'>
         <PrimaryButton>Start my 7-days trial</PrimaryButton>
       </Link>
-      <Link to='/' className='text-secondary  text-uppercase h6'>
+      <Link to='/sales/v2' className='text-secondary  text-uppercase h6'>
         SKIP TRIAL
       </Link>
     </div>

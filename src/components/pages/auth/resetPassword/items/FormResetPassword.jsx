@@ -5,7 +5,7 @@ import userAPI from "../../../../../store/services/UserService.js";
 import {useForm} from "react-hook-form";
 import {confirmPasswordSchema} from "../../../../../validationsSchems/confirmPassword.js";
 import {yupResolver} from "@hookform/resolvers/yup";
-import Input from "../../../../reusable/form/items/inputs/Input.jsx";
+import OldInput from "../../../../reusable/form/items/inputs/OldInput.jsx";
 import PrimaryButton from "../../../../reusable/form/items/buttons/PrimaryButton.jsx";
 
 const objectValidation = {
@@ -43,7 +43,6 @@ const FormResetPassword = () => {
     mode: "onChange",
   });
 
-  console.log('FormResetPassword', errors);
   const onSubmit = async (data) => {
     const res = await sendCode(data)
     if (res.error) {
@@ -55,10 +54,10 @@ const FormResetPassword = () => {
 
   return (
     <Form error={error} onSubmit={handleSubmit(onSubmit)} formClassName='form content-auth__form'>
-      <Input errors={errors.password} label='Your New Password' name='password' register={register}
-             objectValidation={objectValidation.password}/>
-      <Input errors={errors.passwordConfirmation} label='Confirm Password' name='passwordConfirmation'
-             register={register} objectValidation={objectValidation.passwordConfirmation}/>
+      <OldInput errors={errors.password} label='Your New Password' name='password' register={register}
+                objectValidation={objectValidation.password}/>
+      <OldInput errors={errors.passwordConfirmation} label='Confirm Password' name='passwordConfirmation'
+                register={register} objectValidation={objectValidation.passwordConfirmation}/>
       <PrimaryButton className='' type='submit'>Continue</PrimaryButton>
     </Form>
   );

@@ -1,29 +1,34 @@
-import React, {useEffect} from 'react';
-import Input from "../../../../../reusable/form/items/inputs/Input.jsx";
+import React from 'react';
 import PrimaryButton from "../../../../../reusable/form/items/buttons/PrimaryButton.jsx";
-import {yupResolver} from '@hookform/resolvers/yup';
-import {useForm} from "react-hook-form";
-import {loginSchema} from "../../../../../../validationsSchems/login.js";
 import userAPI from "../../../../../../store/services/UserService.js";
 import Form from "../../../../../reusable/form/Form.jsx";
 import {Link} from "react-router-dom";
+import {useFormValidator} from "../../../../../../../form-validator/hooks/index.js";
+import ValidationSchema from "../../../../../../../form-validator/ValidationSchema.js";
+import Input from "../../../../../reusable/form/items/inputs/Input.jsx";
 
+const validationSchema = new ValidationSchema(
+  {
+    identifier: [
+      {rule: 'required'},
+      {rule: 'phoneOrEmail'},
+    ],
+    password: [
+      {rule: 'required'},
+    ],
+  }
+);
 
 const LoginForms = () => {
   const [login, {loading, data, error}] = userAPI.useLoginUserMutation()
-  const {register, handleSubmit, formState: {errors}} = useForm({
-    resolver: yupResolver(loginSchema)
+  const {register, handleSubmit} = useFormValidator(validationSchema, (formData) => {
+    login(formData)
   });
-  const onSubmit = data => login(data)
-
-  useEffect(() => {
-
-  }, [error])
 
   return (
-    <Form error={error} onSubmit={handleSubmit(onSubmit)} formClassName='login__form'>
-      <Input errors={errors.identifier} label='Your Phone or Email' name='identifier' register={register}/>
-      <Input errors={errors.password} type='password' label='Your Password' name='password' register={register}/>
+    <Form error={error} onSubmit={handleSubmit} formClassName='login__form'>
+      <Input label='Your Phone or Email' name='identifier' register={register}/>
+      <Input type='password' label='Your Password' name='password' register={register}/>
       <div className={'login__forgot'}>
         <Link className={'login__assets'} to='/auth/forgot-password'>Forgot Password</Link>
       </div>

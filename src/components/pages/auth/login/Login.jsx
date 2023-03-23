@@ -1,11 +1,8 @@
 import React from 'react';
-import Logo from "../../../reusable/assets/logo/Logo.jsx";
 import DoubleLayout from "../../../layouts/doubleLayout/DoubleLayout.jsx";
 import {Link} from "react-router-dom";
 import LoginForms from "./items/loginForms/LoginForms.jsx";
 import QuadServicesButtons from "./items/serviceButtons/QuadServicesButtons.jsx";
-import SecondaryButton from "../../../reusable/form/items/buttons/SecondaryButton.jsx";
-
 
 const Login = () => {
   return (

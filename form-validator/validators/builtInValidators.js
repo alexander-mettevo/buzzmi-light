@@ -85,9 +85,71 @@ export const leastOneSpecialCharacter = () => (value) => {
 
 /**
  * Confirm password
- * @returns {function(*): boolean}
+ * @returns {function(*, *): boolean}
  */
 
 export const passwordConfirmation = (passwordFieldName) => (value, formData) => {
   return value === formData[passwordFieldName];
 };
+
+/**
+ * Email validation
+ * @returns {function(*): boolean}
+ */
+
+export const email = () => (value) => {
+  return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+}
+
+/**
+ * Phone or email validation. Example: +380123456789 or 0991234567
+ * @returns {function(*): boolean}
+ */
+
+export const phoneOrEmail = () => (value) => {
+  return /^[+]?[0-9]{10,12}$/.test(value) || /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+}
+
+/**
+ * Count digits validation
+ * @returns {function(*): boolean}
+ */
+
+export const countDigits = (count) => (value) => {
+  return value.length === count;
+}
+
+/**
+ * Country phone code validation
+ * @returns {function(*): boolean}
+ */
+
+export const countryPhoneCode = () => (value) => {
+  return /^[+]?[0-9]{1,3}$/.test(value);
+}
+
+/**
+ * Phone validation
+ * @returns {function(*): boolean}
+ */
+
+export const phone = () => (value) => {
+  return /^[+]?[0-9]{10,12}$/.test(value);
+}
+
+/**
+ * 18+ validation
+ * @returns {function(*): boolean}
+ */
+
+export const age18Plus = () => (value) => {
+  const birthDate = new Date(value);
+  const currentDate = new Date();
+  const ageDifference = currentDate - birthDate;
+  const ageInYears = ageDifference / (1000 * 60 * 60 * 24 * 365.25);
+  return ageInYears >= 18;
+}
+
+/**
+ *
+ */

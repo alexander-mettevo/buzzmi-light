@@ -1,7 +1,7 @@
-import { useState, useCallback } from 'react';
+import {useState, useCallback} from 'react';
 
 const useFormValidator = (validationSchema, onSubmit, config = {}) => {
-  const { showErrorsOnSubmit = true } = config;
+  const {showErrorsOnSubmit = true} = config;
 
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
@@ -30,13 +30,15 @@ const useFormValidator = (validationSchema, onSubmit, config = {}) => {
 
   const handleSubmit = useCallback(
     async (event) => {
+
       event.preventDefault();
       setIsSubmitted(true);
 
       const formErrors = await validationSchema.validate(values);
-
       setErrors(formErrors);
-      setIsValid(Object.values(formErrors).every((error) => !error));
+      const isValid = Object.values(formErrors).every((error) => !error);
+
+      setIsValid(isValid);
 
       if (isValid) {
         onSubmit(values);
@@ -63,6 +65,14 @@ const useFormValidator = (validationSchema, onSubmit, config = {}) => {
     return validationSchema.getFieldMessages(fieldName);
   };
 
+  const setValue = (fieldName, fieldValue) => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      [fieldName]: fieldValue,
+    }));
+
+  };
+
   return {
     values,
     errors,
@@ -70,6 +80,7 @@ const useFormValidator = (validationSchema, onSubmit, config = {}) => {
     register,
     getFieldMessages,
     handleSubmit,
+    setValue
   };
 };
 
