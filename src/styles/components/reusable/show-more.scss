@@ -26,28 +26,26 @@
       border: 0;
       background: none;
       position: relative;
-      width: 30px;
-      height: 30px;
 
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: calc((30px - 1px) / 2);
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: var(--bg-secondary);
-        border-radius: 1px;
-      }
-
-      &:before {
-        transform: rotate(45deg);
-      }
-
-      &:after {
-        transform: rotate(-45deg);
-      }
+      //&:before,
+      //&:after {
+      //  content: '';
+      //  position: absolute;
+      //  top: calc((30px - 1px) / 2);
+      //  left: 0;
+      //  right: 0;
+      //  height: 1px;
+      //  background: var(--bg-secondary);
+      //  border-radius: 1px;
+      //}
+      //
+      //&:before {
+      //  transform: rotate(45deg);
+      //}
+      //
+      //&:after {
+      //  transform: rotate(-45deg);
+      //}
 
       span {
         display: block;

@@ -1,19 +1,14 @@
 import React from 'react';
 import PaySystems from "./items/PaySystems.jsx";
 import PayForm from "./items/PayForm.jsx";
+import DesktopPay from "./DesktopPay.jsx";
+import MobilePay from "./MobilePay.jsx";
 
 const Pay = () => {
   return (
     <>
-      <div className='h3'>
-        Become Premium Member
-      </div>
-      <div className='pay__row'>
-        <PaySystems/>
-        <div>
-          <PayForm subtotal={144} discount={0} tax={6} total={150}/>
-        </div>
-      </div>
+      <DesktopPay/>
+      <MobilePay/>
     </>
   );
 };

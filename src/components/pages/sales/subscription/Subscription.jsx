@@ -32,7 +32,7 @@ const Subscription = () => {
         SAVE 40%
       </div>
       <div className='text-alt-primary subscription__timer'>
-        <Timer eventDate={new Date("2023-03-22T12:00:00")}/>
+        <Timer eventDate={new Date("2023-03-25T12:00:00")}/>
       </div>
       <div className='test-s text-secondary '>
         Your first 7 days free. No commitment. Cancel anytime
@@ -60,7 +60,7 @@ const Subscription = () => {
       <Link to='/sales/pay' className='subscription__btn'>
         <PrimaryButton>Start my 7-days trial</PrimaryButton>
       </Link>
-      <Link to='/sales/v2' className='text-secondary  text-uppercase h6'>
+      <Link to='/sales/v2' className='text-secondary text-r text-uppercase h6'>
         SKIP TRIAL
       </Link>
     </div>

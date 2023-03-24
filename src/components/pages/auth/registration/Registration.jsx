@@ -8,7 +8,7 @@ import Policy from "./items/Policy.jsx";
 
 const Registration = () => {
   return (
-    <DoubleLayout reverse imageUrl={'./images/registration/intro.png'}>
+    <DoubleLayout reverse>
       <div className='registration form-wrapper'>
         <div className='h3 text-center registration__title'>Let’s get you set up</div>
         <QuadServicesButtons/>

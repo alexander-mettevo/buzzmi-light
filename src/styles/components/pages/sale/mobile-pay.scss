@@ -1,0 +1,17 @@
+.mobile-pay {
+  flex: 1;
+  max-width: 470px;
+
+  &__list {
+    width: 100%;
+
+    & > li {
+      margin-bottom: 30px;
+    }
+  }
+
+  .button_pay {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}

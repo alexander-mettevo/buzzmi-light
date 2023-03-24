@@ -46,25 +46,19 @@ const PaySystems = () => {
           style={{height: showMore ? `${contentRef.current.scrollHeight}px` : 0}}
         >
           <li>
-            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/google.svg"
-                                                                alt="pay-system"/></RegularButton>
+            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/google.svg" alt="pay-system"/></RegularButton>
           </li>
           <li>
-            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/payoner.svg"
-                                                                alt="pay-system"/></RegularButton>
+            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/payoner.svg" alt="pay-system"/></RegularButton>
           </li>
         </div>
 
-        <div
-          className={`pay__show-more_m`}
-        >
+        <div className={`pay__show-more_m`}>
           <li>
-            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/google.svg"
-                                                                alt="pay-system"/></RegularButton>
+            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/google.svg" alt="pay-system"/></RegularButton>
           </li>
           <li>
-            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/payoner.svg"
-                                                                alt="pay-system"/></RegularButton>
+            <RegularButton className='_fw button_pay_icon'><img src="/images/assets/pay-systems/payoner.svg" alt="pay-system"/></RegularButton>
           </li>
         </div>
         <li>

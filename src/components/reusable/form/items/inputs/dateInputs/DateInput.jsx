@@ -7,7 +7,6 @@ const DateInput = ({label, setValue, errors}) => {
   const [value, onChange] = useState(null)
 
   const handleDateChange = (date) => {
-    console.log('DateInput', date, setValue)
     onChange(date)
     setValue('birthday', date)
   }

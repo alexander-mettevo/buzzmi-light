@@ -72,11 +72,13 @@ const ShowMore = ({text, content}) => {
   return (
     <div className='show-more text-secondary text-r'>
       <div>{text}</div>
-      <div className={`show-more__wrap-btn ${showMore ? 'show-more__wrap-btn_a' : ''}`}>
+      <div className={`show-more__wrap-btn mb-3 text-left ${showMore ? 'show-more__wrap-btn_a' : ''}`}>
         <button className={`text-primary  show-more__btn-show ${!showMore ? 'show-more__btn_a' : ''}`}
                 onClick={handleShowMore}>Learn more
         </button>
-        <button className={`show-more__btn-hide ${showMore ? 'show-more__btn_a' : ''}`} onClick={handleShowMore}/>
+        <button className={`show-more__btn-hide text-alt-primary ${showMore ? 'show-more__btn_a' : ''}`} onClick={handleShowMore}>
+          Close
+        </button>
       </div>
 
       <div

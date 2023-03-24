@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Form from "../../../reusable/form/Form.jsx";
 import Input from "../../../reusable/form/items/inputs/Input.jsx";
 import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
@@ -18,10 +18,12 @@ const validationSchema = new ValidationSchema(
   }
 );
 
-const CreatePasswordForm = ({passwordLabel = 'Create your Password', submitHandler }) => {
-  const {register, handleSubmit, getFieldMessages} = useFormValidator(validationSchema, submitHandler, {
+const CreatePasswordForm = ({passwordLabel = 'Create your Password', submitHandler, setValid }) => {
+  const {register, handleSubmit, getFieldMessages, isValid} = useFormValidator(validationSchema, submitHandler, {
     showErrorsOnSubmit: false
   });
+
+  useEffect(() => setValid && setValid(isValid), [isValid])
 
   return (
     <Form formClassName={'w-100'} onSubmit={handleSubmit} id='create-password'>

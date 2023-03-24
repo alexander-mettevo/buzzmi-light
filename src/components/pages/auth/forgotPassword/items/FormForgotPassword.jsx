@@ -18,7 +18,7 @@ const validationSchema = new ValidationSchema(
 const FormForgotPassword = () => {
   const navigate = useNavigate();
   const [sendCode, {error}] = userAPI.useForgotPasswordMutation()
-  const {register, handleSubmit} = useFormValidator(validationSchema, async (formData) => {
+  const {register, handleSubmit, isValid} = useFormValidator(validationSchema, async (formData) => {
     //TODO Place for sending data to API
     const res = {}
     if (res.error) {
@@ -32,7 +32,7 @@ const FormForgotPassword = () => {
   return (
     <Form error={error} onSubmit={handleSubmit} formClassName='form content-auth__form'>
       <Input label='Your Phone or Email' name='identifier' register={register}/>
-      <PrimaryButton  type='submit'>Continue</PrimaryButton>
+      <PrimaryButton className={!isValid ? 'button_inactive' : ''} type='submit'>Continue</PrimaryButton>
     </Form>
   );
 };

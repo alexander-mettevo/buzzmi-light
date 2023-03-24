@@ -53,7 +53,7 @@
   font-weight: 400;
   text-transform: none;
 
-  @include adaptiveValue('font-size', 15, 12);
+  @include adaptiveValue('font-size', 16, 12);
   @include adaptiveValue('line-height', 18, 15);
 }
 

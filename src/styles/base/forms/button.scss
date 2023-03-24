@@ -21,7 +21,7 @@
   }
 
   &._fw {
-    max-width: 460px;
+    max-width: 420px;
     width: 100%;
   }
 
@@ -34,7 +34,11 @@
 
     &:hover {
       background: var(--main-bg);
-      color: var(--btn-primary-bg);
+      color: var(--btn-primary-bg) !important;
+
+      * {
+        color: var(--btn-primary-bg) !important;
+      }
     }
   }
 

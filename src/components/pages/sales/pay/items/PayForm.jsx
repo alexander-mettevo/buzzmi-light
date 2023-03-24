@@ -34,7 +34,7 @@ const validationSchema = new ValidationSchema(
 const PayForm = ({subtotal, discount, tax, total}) => {
 const navigate = useNavigate();
 
-  const {register, handleSubmit, errors} = useFormValidator(validationSchema, async (formData) => {
+  const {register, handleSubmit, isValid} = useFormValidator(validationSchema, async (formData) => {
     //TODO Place for sending data to API
     const res = {}
     if (res.error) {
@@ -42,8 +42,7 @@ const navigate = useNavigate();
     } else {
       navigate('/auth/finish')
     }
-  });
-
+  }, {showErrorsOnSubmit: false});
 
   return (
     <Form onSubmit={handleSubmit} formClassName='pay-form'>
@@ -62,11 +61,20 @@ const navigate = useNavigate();
       </div>
 
       <div>
-        <PrimaryButton type='submit'><span>Checkout</span><span className='pay-form__total'>${total}</span></PrimaryButton>
+        <PrimaryButton  className={!isValid ? 'button_inactive' : ''} type='submit'><span>Checkout</span><span className='pay-form__total'>${total}</span></PrimaryButton>
         <div className='text-s text-secondary text-center pay-form__note'>
-          <p>
+          <p className='d-lg-none'>
             By continuing, you agree to Buzzmi’s <Link to='/terms-of-service' className='text-alert'>Terms of Service</Link> and confirm that you have read Buzzmi’s <Link to='/pilicy' className='text-alert'>Privacy Policy</Link>.
           </p>
+          <div className='d-none d-lg-block'>
+            <p>
+              Billed Yearly. Cancel Anytime.
+              The subscription will automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. You can go to your Account settings to manage your subscription and turn off auto-renew.
+            </p>
+            <p>
+              If any problem, Please Contact Us in “Profile - FAQ & Feedback”.
+            </p>
+          </div>
         </div>
       </div>
     </Form>

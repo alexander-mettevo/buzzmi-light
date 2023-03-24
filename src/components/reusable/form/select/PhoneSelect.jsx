@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Select from "react-select";
 import {phoneNumbersCode} from "./mocData.jsx";
 import {DropdownIndicator} from "./CustomSelect.jsx";
@@ -19,9 +19,9 @@ const validationSchema = new ValidationSchema(
     ],
   }
 );
-const PhoneSelect = () => {
+const PhoneSelect = ({setIsValid}) => {
   const navigate = useNavigate();
-  const {register, handleSubmit, setValue, errors} = useFormValidator(validationSchema, async (formData) => {
+  const {register, handleSubmit, setValue, errors, isValid} = useFormValidator(validationSchema, async (formData) => {
     //TODO Place for sending data to API
     const res = {}
     if (res.error) {
@@ -33,6 +33,8 @@ const PhoneSelect = () => {
   });
   const [selected, setSelected] = useState(null);
   const [focused, setFocused] = useState(false);
+
+  useEffect(() => setIsValid && setIsValid(isValid), [isValid])
 
   const handleFocus = () => {
     setFocused(true);

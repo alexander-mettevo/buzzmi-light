@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
 import PhoneSelect from "../../../reusable/form/select/PhoneSelect.jsx";
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 
 const ProvidePhone = () => {
+  const [isValid, setIsValid] = useState(false)
+
   return (
     <MobileLayout>
       <div className='mb-4'>
@@ -17,7 +19,7 @@ const ProvidePhone = () => {
         <div className='h6 mt-9 mb-sm-3 mb-2'>
           Your phone number
         </div>
-        <PhoneSelect/>
+        <PhoneSelect setIsValid={setIsValid}/>
         <Link to='/auth/provide-email' className='h6 text-alt-primary  text-b mt-5 d-inline-block mb-6'>
           or sign up with email
         </Link>
@@ -27,7 +29,7 @@ const ProvidePhone = () => {
       </div>
 
       <div>
-        <PrimaryButton type='submit' className='mb-7'  form='phone-code'>Next</PrimaryButton>
+        <PrimaryButton type='submit' className={`mb-7 ${!isValid ? 'button_inactive' : ''}`}  form='phone-code'>Next</PrimaryButton>
         <div className='text-s text-secondary'>
           By continuing, you agree to Buzzmi’s Terms of Service and confirm that you have read Buzzmi’s Privacy Policy.
         </div>

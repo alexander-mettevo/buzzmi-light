@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import {Link, useNavigate} from "react-router-dom";
 import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
@@ -22,7 +22,7 @@ const validationSchema = new ValidationSchema(
 
 const ProvideEmail = () => {
   const navigate = useNavigate();
-  const {register, handleSubmit} = useFormValidator(validationSchema, async (formData) => {
+  const {register, handleSubmit, isValid} = useFormValidator(validationSchema, async (formData) => {
     //TODO Place for sending data to API
     const res = {}
     if (res.error) {
@@ -57,7 +57,7 @@ const ProvideEmail = () => {
       </div>
 
       <div>
-        <PrimaryButton type="submit" form="email-code" className='mb-7'>Next</PrimaryButton>
+        <PrimaryButton type="submit" form="email-code" className={`mb-7 ${!isValid ? 'button_inactive' : ''}`}>Next</PrimaryButton>
         <div className='text-s text-secondary'>
           By continuing, you agree to Buzzmi’s Terms of Service and confirm that you have read Buzzmi’s Privacy Policy.
         </div>

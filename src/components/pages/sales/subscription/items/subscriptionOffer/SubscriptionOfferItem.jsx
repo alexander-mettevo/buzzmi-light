@@ -23,7 +23,7 @@ const SubscriptionOfferItem = (args) => {
             <span className="offer-item__price_main h5 ">
             {mainPrice}
           </span>
-            {isSpecialOffer && <span className="offer-item__special_offer h5 text-alt-primary">Special Offer</span>}
+            {isSpecialOffer && <span className="offer-item__special_offer text-r h5 text-alt-primary">Special Offer</span>}
           </div>
 
           {discount && <Discount discount={discount} specialOffer={specialOffer}/>}

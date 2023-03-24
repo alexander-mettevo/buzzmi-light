@@ -17,10 +17,7 @@ const BioPage = () => {
         </div>
       </div>
       <BioPageForm/>
-      <div>
-        <PrimaryButton className={`mb-7`} type="submit" form="input-bio">Next</PrimaryButton>
-        <Policy/>
-      </div>
+
     </MobileLayout>
   );
 };

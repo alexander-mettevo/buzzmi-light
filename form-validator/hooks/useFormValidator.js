@@ -1,4 +1,4 @@
-import {useState, useCallback} from 'react';
+import {useState, useCallback, useEffect} from 'react';
 
 const useFormValidator = (validationSchema, onSubmit, config = {}) => {
   const {showErrorsOnSubmit = true} = config;
@@ -35,7 +35,7 @@ const useFormValidator = (validationSchema, onSubmit, config = {}) => {
       setIsSubmitted(true);
 
       const formErrors = await validationSchema.validate(values);
-      setErrors(formErrors);
+
       const isValid = Object.values(formErrors).every((error) => !error);
 
       setIsValid(isValid);
@@ -46,6 +46,21 @@ const useFormValidator = (validationSchema, onSubmit, config = {}) => {
     },
     [validationSchema, values, onSubmit, isValid]
   );
+
+
+
+  useEffect(() => {
+    const func = async () => {
+      const formErrors = await validationSchema.validate(values);
+      console.log('isSubmitted', formErrors)
+      const isValid = Object.values(formErrors).every((error) => !error);
+      setIsValid(isValid);
+    }
+
+    func();
+
+  }, [isSubmitted, validationSchema, values])
+
 
   const register = (name, options = {}) => {
     const handleFieldChange = async (event) => {
@@ -70,6 +85,8 @@ const useFormValidator = (validationSchema, onSubmit, config = {}) => {
       ...prevValues,
       [fieldName]: fieldValue,
     }));
+
+    handleChange(fieldName, fieldValue);
 
   };
 

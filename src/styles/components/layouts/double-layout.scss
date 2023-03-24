@@ -55,6 +55,9 @@
   &__intro {
     flex: 1;
     position: relative;
+
+
+
     @media (max-width: $tablet) {
       min-height: 100vh;
       display: flex;
@@ -71,6 +74,10 @@
       }
 
       .tooltip {
+        display: none;
+      }
+
+      &_bg {
         display: none;
       }
     }
@@ -104,6 +111,16 @@
       height: 100%;
       top: 0;
       left: 0;
+      object-fit: contain;
+    }
+  }
+
+  &__bg-wrapper {
+
+
+    img {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
   }
