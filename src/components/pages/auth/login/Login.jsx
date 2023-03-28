@@ -3,12 +3,14 @@ import DoubleLayout from "../../../layouts/doubleLayout/DoubleLayout.jsx";
 import {Link} from "react-router-dom";
 import LoginForms from "./items/loginForms/LoginForms.jsx";
 import QuadServicesButtons from "./items/serviceButtons/QuadServicesButtons.jsx";
+import Logo from "../../../reusable/assets/logo/Logo.jsx";
 
 const Login = () => {
   return (
     <DoubleLayout imageUrl={'./images/login/intro.png'}>
       <div className='form-wrapper w-100'>
         <div className="form form_bg">
+          <Logo subtitle={'Welcome to'}/>
           <LoginForms/>
           <div className='login__assets'>or</div>
           <QuadServicesButtons/>
