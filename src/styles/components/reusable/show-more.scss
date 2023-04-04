@@ -66,6 +66,13 @@
       max-height: 100vh;
     }
   }
+
+  &__subscribe-now {
+    padding: 6px 20px;
+    border-radius: 30px;
+    color: var(--main-opposite-text);
+    background: var(--layout-bg);
+  }
 }
 
 .list-show {
