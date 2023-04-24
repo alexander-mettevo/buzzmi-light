@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import CreatePasswordForm from "../createPassword/CreatePasswordForm.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import {useNavigate} from "react-router-dom";
 
 const ResetPassword = () => {

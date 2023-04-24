@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import Checkbox from "./Checkbox.jsx";
-import PrimaryButton from "../../form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../btns/buttons/PrimaryButton.jsx";
 import {Link} from "react-router-dom";
 
 export const HardCode = () => {

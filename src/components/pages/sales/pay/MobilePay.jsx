@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PayForm from "./items/PayForm.jsx";
-import AltPrimaryButton from "../../../reusable/form/items/buttons/AltPrimaryButton.jsx";
+import AltPrimaryButton from "../../../reusable/btns/buttons/AltPrimaryButton.jsx";
 import MobilePaySystems from "./items/MobilePaySystems.jsx";
 
 const MobilePay = () => {

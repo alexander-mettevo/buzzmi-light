@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import CodeInput from "./CodeInput";
-import PrimaryButton from "../../buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../../btns/buttons/PrimaryButton.jsx";
 import Form from "../../../Form.jsx";
 import userAPI from "../../../../../../store/services/UserService.js";
-import ResendCode from "../../buttons/ResendCode.jsx";
+import ResendCode from "../../../../btns/buttons/ResendCode.jsx";
 import {useNavigate} from "react-router-dom";
 import ValidationSchema from "../../../../../../../form-validator/ValidationSchema.js";
 import {useFormValidator} from "../../../../../../../form-validator/hooks/index.js";

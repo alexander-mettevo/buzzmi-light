@@ -6,7 +6,7 @@ import {useForm} from "react-hook-form";
 import {confirmPasswordSchema} from "../../../../../validationsSchems/confirmPassword.js";
 import {yupResolver} from "@hookform/resolvers/yup";
 import OldInput from "../../../../reusable/form/items/inputs/OldInput.jsx";
-import PrimaryButton from "../../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../../reusable/btns/buttons/PrimaryButton.jsx";
 
 const objectValidation = {
   password: {

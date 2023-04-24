@@ -2,7 +2,7 @@ import React from 'react';
 import DoubleLayout from "../../../layouts/doubleLayout/DoubleLayout.jsx";
 
 import QuadServicesButtons from "../login/items/serviceButtons/QuadServicesButtons.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import {Link} from "react-router-dom";
 import Policy from "./items/Policy.jsx";
 

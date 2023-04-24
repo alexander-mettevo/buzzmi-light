@@ -1,5 +1,5 @@
 import React from 'react';
-import RegularButton from "../../../../../reusable/form/items/buttons/RegularButton.jsx";
+import RegularButton from "../../../../../reusable/btns/buttons/RegularButton.jsx";
 import GoogleSvg from "./icons/GoogleSVG.jsx";
 import AppleSvg from "./icons/AppleSVG.jsx";
 import FacebookSvg from "./icons/FacebookSVG.jsx";

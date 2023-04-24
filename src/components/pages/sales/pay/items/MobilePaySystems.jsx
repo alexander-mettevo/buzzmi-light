@@ -1,5 +1,5 @@
 import React from 'react';
-import RegularButton from "../../../../reusable/form/items/buttons/RegularButton.jsx";
+import RegularButton from "../../../../reusable/btns/buttons/RegularButton.jsx";
 
 const MobilePaySystems = () => {
   return (

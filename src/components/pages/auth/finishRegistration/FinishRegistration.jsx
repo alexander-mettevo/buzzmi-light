@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "../../../reusable/assets/logo/Logo.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import {Link} from "react-router-dom";
 
 const FinishRegistration = () => {
