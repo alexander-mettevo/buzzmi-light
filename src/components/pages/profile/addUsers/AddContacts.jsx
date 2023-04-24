@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import SearchInput from "../../../reusable/form/items/inputs/SearchInput.jsx";
 import UsersList from "../items/UsersList.jsx";
 import {contacts} from "../items/mocData.js";

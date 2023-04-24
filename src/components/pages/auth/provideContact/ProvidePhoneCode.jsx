@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import { useNavigate} from "react-router-dom";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import CodeInput from "../../../reusable/form/items/inputs/codeInputs/CodeInput.jsx";
-import ResendCode from "../../../reusable/form/items/buttons/ResendCode.jsx";
+import ResendCode from "../../../reusable/btns/buttons/ResendCode.jsx";
 import FinallyMessage from "../../../reusable/form/items/validation/FinallyMessage.jsx";
 import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
 import {useFormValidator} from "../../../../../form-validator/hooks/index.js";

@@ -3,8 +3,8 @@ import {useNavigate} from "react-router-dom";
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import CodeInput from "../../../reusable/form/items/inputs/codeInputs/CodeInput.jsx";
 import FinallyMessage from "../../../reusable/form/items/validation/FinallyMessage.jsx";
-import ResendCode from "../../../reusable/form/items/buttons/ResendCode.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import ResendCode from "../../../reusable/btns/buttons/ResendCode.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import {useFormValidator} from "../../../../../form-validator/hooks/index.js";
 import ValidationSchema from "../../../../../form-validator/ValidationSchema.js";
 

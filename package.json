@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://alexander-mettevo.github.io/REPO_NAME",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -27,11 +30,24 @@
     "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/addon-styling": "^1.0.1",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-vite": "^7.0.6",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.13",
+    "gh-pages": "^5.0.0",
+    "prop-types": "^15.8.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.58.3",
+    "sass-loader": "^13.2.2",
+    "storybook": "^7.0.6",
     "vite": "^4.1.0",
     "vite-plugin-webfont-dl": "^3.6.1"
   },

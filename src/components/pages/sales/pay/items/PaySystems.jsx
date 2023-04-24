@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
-import AltPrimaryButton from "../../../../reusable/form/items/buttons/AltPrimaryButton.jsx";
-import RegularButton from "../../../../reusable/form/items/buttons/RegularButton.jsx";
-import Button from "../../../../reusable/form/items/buttons/Button.jsx";
+import AltPrimaryButton from "../../../../reusable/btns/buttons/AltPrimaryButton.jsx";
+import RegularButton from "../../../../reusable/btns/buttons/RegularButton.jsx";
+import Button from "../../../../reusable/btns/buttons/Button.jsx";
 import {Link} from "react-router-dom";
 
 const PaySystems = () => {

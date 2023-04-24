@@ -2,7 +2,7 @@ import React from 'react';
 import SubscriptionCard from "./items/SubscriptionCard.jsx";
 import {HardCode} from "../../../reusable/assets/showMore/ShowMore.jsx";
 import Timer from "../../../reusable/assets/timer/Timer.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import {Link} from "react-router-dom";
 
 const Subscription = () => {

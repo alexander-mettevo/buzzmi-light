@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import CreatePasswordForm from "./CreatePasswordForm.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import {useNavigate} from "react-router-dom";
 
 const CreatePassword = () => {

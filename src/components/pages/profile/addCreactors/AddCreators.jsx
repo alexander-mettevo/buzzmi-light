@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import ProfileItemsCollection from "../items/ProfileItemsCollection.jsx";
 import AddCreatorsMobileBtns from "./items/AddCreatorsMobileBtns.jsx";
 import {creators} from "../items/mocData.js";

@@ -1,7 +1,7 @@
 import React from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import Policy from "../registration/items/Policy.jsx";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import BioPageForm from "./items/BioPageForm.jsx";
 
 const BioPage = () => {

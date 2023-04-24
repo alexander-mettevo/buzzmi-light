@@ -6,7 +6,7 @@ import InvitationInputs from "../../../../reusable/form/items/inputs/codeInputs/
 import ValidationSchema from "../../../../../../form-validator/ValidationSchema.js";
 import {useFormValidator} from "../../../../../../form-validator/hooks/index.js";
 import Input from "../../../../reusable/form/items/inputs/Input.jsx";
-import PrimaryButton from "../../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../../reusable/btns/buttons/PrimaryButton.jsx";
 import Policy from "../../registration/items/Policy.jsx";
 
 const validationSchema = new ValidationSchema(

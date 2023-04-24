@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 import MobileLayout from "../../../layouts/mobileLayout/MobileLayout.jsx";
 import {Link, useNavigate} from "react-router-dom";
-import PrimaryButton from "../../../reusable/form/items/buttons/PrimaryButton.jsx";
+import PrimaryButton from "../../../reusable/btns/buttons/PrimaryButton.jsx";
 import OldInput from "../../../reusable/form/items/inputs/OldInput.jsx";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";

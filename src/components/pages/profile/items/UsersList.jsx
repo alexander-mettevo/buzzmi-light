@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
-import SecondaryButton from "../../../reusable/form/items/buttons/SecondaryButton.jsx";
+import SecondaryButton from "../../../reusable/btns/buttons/SecondaryButton.jsx";
 
 const UsersList = ({users}) => {
   const handleInviteButton = () => {
